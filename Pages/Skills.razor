@@ -1,0 +1,132 @@
+﻿@page "/skills"
+@using MicaelaPortfolio.Services
+@inject SkillService SkillService
+@inject IJSRuntime JSRuntime
+
+<PageTitle>Skills | Micaela Nilsson</PageTitle>
+
+<div class="page-header">
+    <h1>My Skills</h1>
+    <p>Technologies and tools I've worked with</p>
+</div>
+
+<section class="skills-section">
+    <h2 class="skills-category">Frontend Development</h2>
+
+    <div class="skills-grid">
+        @foreach (var skill in SkillService.GetSkillsByCategory("frontend"))
+        {
+            <div class="skill-card" data-aos="fade-up">
+                <div class="skill-icon">
+                    <div class="icon-circle">
+                        <i class="@GetIconClass(skill.Name)"></i>
+                    </div>
+                </div>
+                <h3>@skill.Name</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: @(skill.ProficiencyLevel)%"></div>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+<section class="skills-section">
+    <h2 class="skills-category">Backend Development</h2>
+
+    <div class="skills-grid">
+        @foreach (var skill in SkillService.GetSkillsByCategory("backend"))
+        {
+            <div class="skill-card" data-aos="fade-up">
+                <div class="skill-icon">
+                    <div class="icon-circle">
+                        <i class="@GetIconClass(skill.Name)"></i>
+                    </div>
+                </div>
+                <h3>@skill.Name</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: @(skill.ProficiencyLevel)%"></div>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+<section class="skills-section">
+    <h2 class="skills-category">Other Technologies</h2>
+
+    <div class="skills-grid">
+        @foreach (var skill in SkillService.GetSkillsByCategory("other"))
+        {
+            <div class="skill-card" data-aos="fade-up">
+                <div class="skill-icon">
+                    <div class="icon-circle">
+                        @if (skill.Name.ToLower() == "clickup" || skill.Name.ToLower() == "umbraco")
+                        {
+                            @GetSimpleIconSvg(skill.Name)
+                        }
+                        else
+                        {
+                            <i class="@GetIconClass(skill.Name)"></i>
+                        }
+                    </div>
+                </div>
+                <h3>@skill.Name</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: @(skill.ProficiencyLevel)%"></div>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+@code {
+    private string GetIconClass(string skillName)
+    {
+        return skillName.ToLower() switch
+        {
+            "blazor" => "devicon-blazor-original",
+            "html" => "fab fa-html5",
+            "css" => "fab fa-css3-alt",
+            "javascript" => "fab fa-js",
+            "react" => "fab fa-react",
+            "tailwind css" => "devicon-tailwindcss-original",
+            "c#" => "devicon-csharp-line",
+            "asp .net core" => "devicon-dotnetcore-plain",
+            "sql server" => "devicon-azuresqldatabase-plain",
+            "entity framework" => "fas fa-database",
+            "azure" => "devicon-azure-plain",
+            "graphql" => "fas fa-project-diagram",
+            "umbraco" => "simple-icon-umbraco",
+            "clickup" => "simple-icon-clickup",
+            "github" => "devicon-github-original",
+            "typescript" => "devicon-typescript-plain",
+            "node.js" => "devicon-nodejs-plain",
+            _ => "fas fa-code"
+        };
+    }
+
+    private RenderFragment GetSimpleIconSvg(string skillName)
+    {
+        return builder =>
+        {
+            if (skillName.ToLower() == "clickup")
+            {
+                builder.AddMarkupContent(0, @"<svg role=""img"" viewBox=""0 0 24 24"" xmlns=""http://www.w3.org/2000/svg"" width=""24"" height=""24""><path fill=""currentColor"" d=""M2 18.439l3.69-2.828c1.961 2.56 4.044 3.739 6.363 3.739 2.307 0 4.33-1.166 6.203-3.704L22 18.405C19.298 22.065 15.941 24 12.053 24 8.178 24 4.788 22.078 2 18.439zM12.04 6.15l-6.568 5.66-3.036-3.52L12.055 0l9.543 8.296-3.05 3.509z""/></svg>");
+            }
+            else if (skillName.ToLower() == "umbraco")
+            {
+                builder.AddMarkupContent(0, @"<svg role=""img"" viewBox=""0 0 24 24"" xmlns=""http://www.w3.org/2000/svg"" width=""24"" height=""24""><path fill=""currentColor"" d=""M0 11.982A12 12 0 1 1 12 24 12 12 0 0 1 0 11.982zm11.756 4.11a11.856 11.856 0 0 1-2.773-.25 2.12 2.12 0 0 1-1.514-1.218q-.41-.943-.396-2.895a18.419 18.419 0 0 1 .127-2.04q.118-.988.236-1.629l.082-.425a.201.201 0 0 0 0-.038.244.244 0 0 0-.201-.236l-1.544-.246H5.74a.243.243 0 0 0-.235.189 6.517 6.517 0 0 0-.089.409c-.088.455-.17.9-.26 1.548a19.99 19.99 0 0 0-.176 2.12 11.165 11.165 0 0 0 0 1.486q.05 1.977.675 3.155.626 1.179 2.106 1.695 1.482.517 4.135.506h.22q2.655.01 4.134-.506 1.478-.518 2.1-1.695.623-1.178.678-3.147a11.165 11.165 0 0 0 0-1.485 19.99 19.99 0 0 0-.176-2.121 30.014 30.014 0 0 0-.26-1.548 6.724 6.724 0 0 0-.088-.41.243.243 0 0 0-.236-.188h-.04l-1.548.242a.236.236 0 0 0-.203.236.201.201 0 0 0 0 .037l.081.426q.118.643.236 1.63a18.709 18.709 0 0 1 .126 2.039q.019 1.95-.396 2.892a2.12 2.12 0 0 1-1.502 1.22 11.82 11.82 0 0 1-2.769.247Z""/></svg>");
+            }
+        };
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("eval", "document.body.setAttribute('data-page', 'skills')");
+        }
+    }
+}
+

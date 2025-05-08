@@ -1,0 +1,15 @@
+﻿// Header styles
+.header {
+    padding: 1rem 0;
+    background-color: #F5F4F0;
+    border-bottom: 1px solid var(--border);
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+}

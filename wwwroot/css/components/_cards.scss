@@ -1,0 +1,120 @@
+﻿.project-card {
+    @include card;
+    overflow: hidden;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-header {
+        padding: 1.5rem;
+        @include flex(row, space-between, flex-start);
+    }
+
+    .project-icon {
+        @include icon-circle(48px);
+        background-color: var(--primary);
+        color: white;
+        font-size: 1.25rem;
+    }
+
+    .project-badge {
+        background-color: var(--accent);
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 1rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+
+    .project-content {
+        padding: 0 1.5rem 1.5rem;
+
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+    }
+
+    .project-description {
+        color: var(--muted-foreground);
+        margin-bottom: 1rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .project-tech {
+        @include flex(row);
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .project-links {
+        @include flex(row, space-between, center);
+    }
+
+    .external-links {
+        @include flex(row, flex-start, center, 0.75rem);
+    }
+
+    .project-link {
+        @include icon-circle(36px);
+        background-color: var(--muted);
+        color: var(--foreground);
+        transition: background-color var(--transition-speed), color var(--transition-speed);
+
+        &:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+    }
+}
+
+.tech-tag {
+    background-color: var(--muted);
+    color: var(--foreground);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+}
+
+.skill-card {
+    @include card;
+    padding: 1.5rem;
+    @include flex(column, flex-start, center);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-icon {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.feature-card {
+    @include card;
+    padding: 1.5rem;
+    @include flex(row, flex-start, flex-start);
+    gap: 1rem;
+
+    .feature-icon {
+        color: var(--primary);
+        font-size: 1.25rem;
+        flex-shrink: 0;
+    }
+}

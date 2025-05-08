@@ -1,0 +1,159 @@
+﻿@page "/contact"
+@using System.ComponentModel.DataAnnotations
+@inject IJSRuntime JSRuntime
+
+<PageTitle>Contact | Micaela Nilsson</PageTitle>
+
+<div class="page-header">
+    <h1>Get In Touch</h1>
+    <p>Let's discuss your project or job opportunity</p>
+</div>
+
+<section class="contact-section">
+    <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+            <h2>Let's venture through your <span style="color: #FFCB9A;">ideas</span> - if we hit a dead end, we'll blame the squirrels.</h2>
+
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="method-details">
+                        <h3>Email</h3>
+                        <p>mnilsson.dev@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="method-details">
+                        <h3>Location</h3>
+                        <p>Ängelholm, Skåne</p>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="method-details">
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/Mickilinan" target="_blank">github.com/Mickilinan</a>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="method-details">
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/micaela-nilsson-476394283/" target="_blank">Micaela Nilsson</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form" data-aos="fade-left">
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+                <input type="text" name="name" />
+                <input type="email" name="email" />
+                <input type="text" name="subject" />
+                <textarea name="message"></textarea>
+            </form>
+            <EditForm Model="@contactForm" OnValidSubmit="@HandleValidSubmit">
+                <DataAnnotationsValidator />
+
+                @if (isSubmitted)
+                {
+                    <div class="form-success">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Your message has been sent successfully! I'll get back to you soon.</p>
+                    </div>
+                }
+                else
+                {
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <InputText id="name" @bind-Value="contactForm.Name" class="form-control" />
+                        <ValidationMessage For="@(() => contactForm.Name)" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <InputText id="email" @bind-Value="contactForm.Email" class="form-control" />
+                        <ValidationMessage For="@(() => contactForm.Email)" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <InputText id="subject" @bind-Value="contactForm.Subject" class="form-control" />
+                        <ValidationMessage For="@(() => contactForm.Subject)" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <InputTextArea id="message" @bind-Value="contactForm.Message" class="form-control" rows="5" />
+                        <ValidationMessage For="@(() => contactForm.Message)" />
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-block">Send Message</button>
+                }
+            </EditForm>
+        </div>
+    </div>
+</section>
+
+@code {
+    private ContactForm contactForm = new ContactForm();
+    private bool isSubmitted = false;
+
+    private async Task HandleValidSubmit()
+    {
+        // Skapa ett dictionary med fälten
+        var formData = new Dictionary<string, string>
+        {
+            { "form-name", "contact" },
+            { "name", contactForm.Name },
+            { "email", contactForm.Email },
+            { "subject", contactForm.Subject },
+            { "message", contactForm.Message }
+        };
+
+        // Skicka till Netlify via JS
+        await JSRuntime.InvokeVoidAsync("submitNetlifyForm", formData);
+        isSubmitted = true;
+        contactForm = new ContactForm();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("initAOS");
+        }
+    }
+
+    public class ContactForm
+    {
+        [Required(ErrorMessage = "Name is required")]
+        [StringLength(50, MinimumLength = 2, ErrorMessage = "Name must be between 2 and 50 characters")]
+        public string Name { get; set; }
+
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Please enter a valid email address")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Subject is required")]
+        [StringLength(100, MinimumLength = 3, ErrorMessage = "Subject must be between 3 and 100 characters")]
+        public string Subject { get; set; }
+
+        [Required(ErrorMessage = "Message is required")]
+        [StringLength(1000, MinimumLength = 10, ErrorMessage = "Message must be between 10 and 1000 characters")]
+        public string Message { get; set; }
+    }
+}
+

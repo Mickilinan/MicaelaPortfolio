@@ -1,0 +1,62 @@
+﻿
+
+.contact-section {
+    margin-bottom: 4rem;
+}
+
+.contact-grid {
+    @include flex(row, space-between, flex-start);
+    gap: 3rem;
+
+    @include breakpoint('lg') {
+        flex-direction: column;
+    }
+}
+
+.contact-info {
+    flex: 1;
+
+    h2 {
+        font-size: 1.75rem;
+        line-height: 1.4;
+        margin-bottom: 2rem;
+    }
+}
+
+.contact-methods {
+    @include flex(column, flex-start, flex-start);
+    gap: 1.5rem;
+}
+
+.contact-method {
+    @include flex(row, flex-start, flex-start);
+    gap: 1rem;
+}
+
+.method-icon {
+    @include icon-circle(48px);
+    background-color: var(--muted);
+    color: var(--primary);
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.method-details {
+    h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    a {
+        color: var(--muted-foreground);
+        @include transition(color);
+
+        &:hover {
+            color: var(--primary);
+        }
+    }
+}
+
+.contact-form {
+    flex: 2;
+}

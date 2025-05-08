@@ -1,0 +1,74 @@
+﻿@page "/"
+@using MicaelaPortfolio.Services
+@inject ProjectService ProjectService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Micaela Nilsson | .NET Developer</PageTitle>
+
+<section class="hero-section">
+    <div class="hero-content">
+        <div class="hero-text" data-aos="fade-right">
+            <h1>Hi, I'm <span style="color: #FFCB9A;">Micaela</span></h1>
+            <h2>A Junior .NET Web Developer</h2>
+            <p>Based in Ängelholm, Skåne</p>
+
+            <div class="hero-buttons">
+                <a href="projects" class="btn-primary">
+                    View My Work
+                </a>
+                <a href="contact" class="btn-outline">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image" data-aos="fade-left">
+            <div class="blob"></div>
+            <img src="/images/cartoonme.jpeg" alt="Micaela Nilsson" />
+        </div>
+    </div>
+</section>
+
+
+<section class="skills-highlight">
+    <h2 class="section-title" data-aos="fade-up">My Tech Stack</h2>
+
+    <div class="skills-icons">
+        <div class="skill-icon" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-circle">
+                <i class="devicon-dotnetcore-plain"></i>
+            </div>
+            <span>.NET</span>
+        </div>
+        <div class="skill-icon" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-circle">
+                <i class="devicon-csharp-line"></i>
+            </div>
+            <span>C#</span>
+        </div>
+        <div class="skill-icon" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-circle">
+                <i class="devicon-blazor-original"></i>
+            </div>
+            <span>Blazor</span>
+        </div>
+        <div class="skill-icon" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon-circle">
+                <i class="devicon-azure-plain"></i>
+            </div>
+            <span>Azure</span>
+        </div>
+        <div class="skill-icon" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-circle">
+                <i class="fab fa-react"></i>
+            </div>
+            <span>React</span>
+        </div>
+    </div>
+
+    <div class="view-all">
+        <a href="skills" class="btn-outline">
+            View All Skills
+        </a>
+    </div>
+</section>

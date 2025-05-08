@@ -1,0 +1,141 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\abstracts\\_mixins.scss",
+      "PackagePath": "staticwebassets\\css\\abstracts\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\abstracts\\_variables.scss",
+      "PackagePath": "staticwebassets\\css\\abstracts\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\app.css.map",
+      "PackagePath": "staticwebassets\\css\\app.css.map"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\app.min.css",
+      "PackagePath": "staticwebassets\\css\\app.min.css"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\app.scss",
+      "PackagePath": "staticwebassets\\css\\app.scss"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\base\\_animations.scss",
+      "PackagePath": "staticwebassets\\css\\base\\_animations.scss"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\base\\_reset.scss",
+      "PackagePath": "staticwebassets\\css\\base\\_reset.scss"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\base\\_typography.scss",
+      "PackagePath": "staticwebassets\\css\\base\\_typography.scss"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\components\\_buttons.scss",
+      "PackagePath": "staticwebassets\\css\\components\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\components\\_cards.scss",
+      "PackagePath": "staticwebassets\\css\\components\\_cards.scss"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\components\\_forms.scss",
+      "PackagePath": "staticwebassets\\css\\components\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\components\\_navmenu.scss",
+      "PackagePath": "staticwebassets\\css\\components\\_navmenu.scss"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\layout\\_footer.scss",
+      "PackagePath": "staticwebassets\\css\\layout\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\layout\\_header.scss",
+      "PackagePath": "staticwebassets\\css\\layout\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\layout\\_mainlayout.scss",
+      "PackagePath": "staticwebassets\\css\\layout\\_mainlayout.scss"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\pages\\_about.scss",
+      "PackagePath": "staticwebassets\\css\\pages\\_about.scss"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\pages\\_contact.scss",
+      "PackagePath": "staticwebassets\\css\\pages\\_contact.scss"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\pages\\_home.scss",
+      "PackagePath": "staticwebassets\\css\\pages\\_home.scss"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\pages\\_projects.scss",
+      "PackagePath": "staticwebassets\\css\\pages\\_projects.scss"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\pages\\_skills.scss",
+      "PackagePath": "staticwebassets\\css\\pages\\_skills.scss"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\images\\cartoonme.jpeg",
+      "PackagePath": "staticwebassets\\images\\cartoonme.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MicaelaPortfolio.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MicaelaPortfolio.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MicaelaPortfolio.props",
+      "PackagePath": "build\\MicaelaPortfolio.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MicaelaPortfolio.props",
+      "PackagePath": "buildMultiTargeting\\MicaelaPortfolio.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MicaelaPortfolio.props",
+      "PackagePath": "buildTransitive\\MicaelaPortfolio.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

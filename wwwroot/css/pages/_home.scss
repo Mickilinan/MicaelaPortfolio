@@ -1,0 +1,244 @@
+﻿
+// Hero section styles
+
+.hero-section {
+    padding: 4rem 0;
+}
+
+.hero-content {
+    @include flex(row, space-between, center);
+    gap: 4rem;
+
+    @include breakpoint('lg') {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.hero-text {
+    flex: 1;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        color: var(--muted-foreground);
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.hero-buttons {
+    @include flex(row, flex-start, center, 1rem);
+
+    @include breakpoint('lg') {
+        justify-content: center;
+    }
+}
+
+.hero-image {
+    flex: 1;
+    @include flex(row, center, center);
+
+    img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.hero-section {
+    padding: 4rem 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.hero-text {
+    flex: 1;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        color: var(--muted-foreground);
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+
+    @media (max-width: 992px) {
+        justify-content: center;
+    }
+}
+
+.hero-image {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 2;
+    }
+
+    .blob {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 360px;
+        height: 360px;
+        transform: translate(-50%, -50%);
+        background: #d9efd7; // ljusgrön/jordton
+        border-radius: 50% 45% 55% 50% / 50% 55% 45% 50%;
+        /* alternativt en SVG-path via background-image */
+        z-index: 1;
+        filter: blur(40px);
+        opacity: 0.6;
+    }
+} 
+
+// Featured Projects Section
+.featured-projects {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+// Skills Highlight Section
+.skills-highlight {
+    padding: 4rem 0;
+
+    .section-title {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+.skills-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.skill-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+
+    .icon-circle {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: var(--muted);
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        transition: background-color var(--transition-speed), color var(--transition-speed);
+    }
+
+    &:hover .icon-circle {
+        background-color: var(--primary);
+        color: white;
+    }
+
+    span {
+        font-size: 1rem;
+        color: var(--foreground);
+    }
+}
+
+.view-all {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+// Timeline Section
+.timeline-section {
+    margin-bottom: 4rem;
+}
+
+// CTA Section
+.cta-section {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: var(--primary);
+    color: white;
+    border-radius: var(--border-radius);
+    margin: 4rem 0;
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: white;
+    }
+
+    p {
+        font-size: 1.25rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 2rem;
+    }
+
+    .btn-secondary {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        background-color: white;
+        color: var(--primary);
+
+        &:hover {
+            background-color: var(--muted);
+            color: var(--primary);
+        }
+    }
+}

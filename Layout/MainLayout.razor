@@ -1,0 +1,73 @@
+﻿
+@inherits LayoutComponentBase
+@inject IJSRuntime JSRuntime
+
+<div class="app-container">
+    <NavMenu />
+
+    <main class="main-content">
+        <div class="content-container">
+            @Body
+           
+        </div>
+
+        <footer class="app-footer">
+            <div class="footer-content">
+                <div class="footer-copyright">
+                    <p>&copy; @DateTime.Now.Year Micaela Nilsson. All rights reserved.</p>
+                </div>
+
+                <div class="footer-social">
+                    <a href="https://github.com/Mickilinan" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/micaela-nilsson-476394283/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                  
+                </div>
+            </div>
+        </footer>
+    </main>
+</div>
+
+@code {
+    private bool isDarkTheme = false;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Initialize AOS (Animate on Scroll)
+            await JSRuntime.InvokeVoidAsync("initAOS");
+
+            // Check for saved theme preference
+            var theme = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "theme");
+            isDarkTheme = theme == "dark";
+            await UpdateThemeClass();
+            StateHasChanged();
+        }
+    }
+
+    private async Task ToggleTheme()
+    {
+        Console.WriteLine("ToggleTheme called");
+        isDarkTheme = !isDarkTheme;
+        await JSRuntime.InvokeVoidAsync("localStorage.setItem", "theme", isDarkTheme ? "dark" : "light");
+        await UpdateThemeClass();
+    }
+
+    private async Task UpdateThemeClass()
+    {
+        if (isDarkTheme)
+        {
+            await JSRuntime.InvokeVoidAsync("document.body.classList.add", "dark-theme");
+        }
+        else
+        {
+            await JSRuntime.InvokeVoidAsync("document.body.classList.remove", "dark-theme");
+        }
+    }
+
+    void LogClick() => Console.WriteLine("App-knapp");
+}

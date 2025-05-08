@@ -1,0 +1,24 @@
+﻿// Color Palette
+$colors: ( 'dark': #2C3531, 'teal': #116466, 'beige': #D9B08C, 'apricot': #FFCB9A, 'mint': #D1E8E2 );
+
+// Theme Variables
+$theme: ( 'background': #2C3531, // body background
+'foreground': #D1E8E2, // text
+'primary': #116466, // teal
+'primary-hover': #0e4f4f, // darker teal
+'secondary': #D9B08C, // beige
+'accent': #FFCB9A, // apricot
+'muted': rgba(44,53,49,0.7), // transparent dark for cards
+'muted-foreground': #D1E8E2, // light text
+'card': rgba(44,53,49,0.85), // semi-transparent dark
+'card-foreground': #D1E8E2, // light text
+'border': #116466, // teal
+'input': #2C3531, // dark
+'ring': #FFCB9A // apricot
+);
+
+// Layout
+$layout: ( 'sidebar-width': 250px, 'border-radius': 8px, 'transition-speed': 0.3s );
+
+// Breakpoints
+$breakpoints: ( 'sm': 576px, 'md': 768px, 'lg': 992px, 'xl': 1200px );

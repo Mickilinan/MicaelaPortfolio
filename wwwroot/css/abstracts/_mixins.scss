@@ -1,0 +1,75 @@
+﻿// Flexbox mixin
+@mixin flex($direction: row, $justify: flex-start, $align: center, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+
+    @if $gap != 0 {
+        gap: $gap;
+    }
+}
+
+// Breakpoint mixin
+@mixin breakpoint($point) {
+    @if $point == 'sm' {
+        @media (max-width: 640px) {
+            @content;
+        }
+    }
+    @else if $point == 'md' {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+    @else if $point == 'lg' {
+        @media (max-width: 992px) {
+            @content;
+        }
+    }
+    @else if $point == 'xl' {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+}
+
+// Card mixin
+@mixin card {
+    background-color: var(--card);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+// Button base mixin
+@mixin button-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+}
+
+// Icon circle mixin
+@mixin icon-circle($size) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Transition mixin
+@mixin transition($properties...) {
+    $transitions: ();
+
+    @each $prop in $properties {
+        $transitions: append($transitions, $prop var(--transition-speed), comma);
+    }
+
+    transition: $transitions;
+}

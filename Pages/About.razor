@@ -1,0 +1,101 @@
+﻿@page "/about"
+@inject IJSRuntime JSRuntime
+
+<PageTitle>About | Micaela Nilsson</PageTitle>
+
+<div class="page-header">
+   
+    <p>Get to know me better</p>
+</div>
+
+<section class="about-section">
+    <div class="about-grid">
+        <div class="about-image" data-aos="fade-right">
+            <img src="/images/cartoonme.jpeg" alt="Micaela Nilsson" />
+        </div>
+
+        <div class="about-content" data-aos="fade-left">
+            @* <h2>Hi, I'm <span style="color: #FFCB9A;">Micaela Nilsson</span></h2>
+            <h3>Junior .NET Developer based in Ängelholm, Skåne</h3> *@
+
+            <div class="about-text">
+                <p>
+                    Ever since I jumped headfirst into the world of web development, I've been totally hooked on how
+                    creative it is! Seriously, watching a project grow, from the first lines of code to the final look
+                    on the screen, feels really awesome. Whether it's designing user-friendly stuff in the frontend or
+                    building the logic behind the scenes in the backend, I love the process of turning ideas into
+                    something real.
+                </p>
+
+                <p>
+                    As a junior web developer, I'm driven by my curiosity and always wanting to learn new things. You
+                    could say I'm the kind of person who likes to ask "why?". <br>
+                    I believe that being careful and able to analyze things are important when you write good code, and I'm 
+                    not afraid to ask what might seem like a "silly" question. <br>During my internship at Akribian, I
+                    learned so much about working in teams and using agile methods. Really digging into React and
+                    TypeScript was a challenge that was actually a lot of fun. It really showed me how important it is
+                    to work together to create cool stuff.
+                </p>
+
+                <p>
+                    What about my future goals? Well, I'm super excited to use my growing skills in a team where I can
+                    keep learning and growing. I'm looking forward to taking on new challenges, working with others on
+                    exciting projects and in the end, building things that make a difference (even if it's in small
+                    ways!).<br> I also want to stay up-to-date with all the new tech that's coming out – because let's be
+                    honest, in this field, there's always something new and exciting to discover!
+                </p>
+
+                <p>
+                    When I'm not coding , you'll probably find me enjoying nature and
+                    animals. I really believe in having a good balance in life and for me that often means doing some
+                    yoga, a bit of meditation or just letting loose and dancing.<br>
+                    Who knew that finding your inner peace could also make you a more focused developer? Maybe it's the flexibility of mind – or maybe it's
+                    just a good way to chill out after dealing with a stubborn bug!
+                </p>
+            </div>
+
+            <div class="info-container" data-aos="fade-up">
+                <div class="highlights">
+                    <h3>✨ Highlights</h3>
+                    <ul>
+                        <li><strong>Education:</strong> .NET Web Developer, EC Utbildning (2023–2025)</li>
+                        <li><strong>Internship:</strong> Akribian – Admin portal for the game "Count On Me" (Nov 2024–Apr 2025)</li>
+                        <li><strong>Portfolio:</strong> Blazor WebAssembly app deployed on Netlify (2025)</li>
+                        <li><strong>Side Project:</strong> Working on a personal project (details coming soon!)</li>
+                    </ul>
+                </div>
+
+                <div class="whats-next" data-aos-delay="200">
+                    <h3>🔭 What's Next</h3>
+                    <ul>
+                        <li><strong>May 2025:</strong> Graduation, full-time job and job search</li>
+                        <li><strong>Azure & Cloud:</strong> Deepen cloud architecture and Azure services skills</li>
+                        <li><strong>Modern Web:</strong> Learn Next.js for SSR/SSG in React</li>
+                        <li><strong>AI & ML:</strong> Explore ML.NET and Azure Cognitive Services for intelligent features</li>
+                        <li><strong>DevOps:</strong> Learn how to build CI/CD pipelines with GitHub Actions or Azure DevOps</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="about-buttons">
+                <a href="contact" class="btn-primary">
+                    Get In Touch
+                </a>
+                <a href="projects" class="btn-outline">
+                    View My Work
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+@code {
+    [Inject]
+    private NavigationManager NavigationManager { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        await JSRuntime.InvokeVoidAsync("initAOS");
+    }
+}
