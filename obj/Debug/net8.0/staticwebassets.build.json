@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Zhd4/OXk9P5Lk8MQal7cJLoOK0W6cCnZa0lauysYJFQ=",
+  "Hash": "IZ3HnyB5eqxUNjZMHEH+hpiMQH5zIJOsHY0lhdY+oW0=",
   "Source": "MicaelaPortfolio",
   "BasePath": "/",
   "Mode": "Root",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "bmoe22domg",
-      "Integrity": "3TF9ZLAM5L/o/8kWkKwm3oiXlMikEHV51eohjdDjRaI=",
+      "Fingerprint": "dfexe440e6",
+      "Integrity": "t5p0aMHaGCv8o6dlv9XYHRp0bN/ueuoODumFs/8KI7c=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net8.0\\blazor.boot.json"
@@ -283,8 +283,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "y74c8xi5ck",
-      "Integrity": "XixXggF/RDRJ6RO0g/dCCoH0GETfJieNFQrgsVld6dg=",
+      "Fingerprint": "l5w9jh2oez",
+      "Integrity": "9/3urKgcMN26FhTOwSRu5JrKtD/RByFwCrpxk9vx32w=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net8.0\\MicaelaPortfolio.pdb"
@@ -304,8 +304,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "iwuu0p42xq",
-      "Integrity": "8ruh6t/IAZBjUVSCtk/NnHw4MPKFhyApz9rJzQQOHSU=",
+      "Fingerprint": "66821j1f53",
+      "Integrity": "Is20fJBs4VrHw1TxdEFdKUp4ScDhlrK3P8OWeR+U1qM=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\webcil\\MicaelaPortfolio.wasm"
@@ -7031,7 +7031,7 @@
       "OriginalItemSpec": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.IO.FileSystem.AccessControl.wasm"
     },
     {
-      "Identity": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\nod4mjap80-y74c8xi5ck.gz",
+      "Identity": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\nod4mjap80-l5w9jh2oez.gz",
       "SourceId": "MicaelaPortfolio",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\",
@@ -7045,8 +7045,8 @@
       "RelatedAsset": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\bin\\Debug\\net8.0\\wwwroot\\_framework\\MicaelaPortfolio.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ngql2btea8",
-      "Integrity": "Nxf+EOUkJ1pJaRgunqjtiQLKnjSfoiC/uznir0WXGuU=",
+      "Fingerprint": "4bxr7n5v4o",
+      "Integrity": "YBSFyqP6fego7fA11FGCGXZZMzAM2khFQ+dqvl84Kiw=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\bin\\Debug\\net8.0\\wwwroot\\_framework\\MicaelaPortfolio.pdb"
@@ -7640,7 +7640,7 @@
       "OriginalItemSpec": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Diagnostics.DiagnosticSource.wasm"
     },
     {
-      "Identity": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\rm7s1ws9k9-bmoe22domg.gz",
+      "Identity": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\rm7s1ws9k9-dfexe440e6.gz",
       "SourceId": "MicaelaPortfolio",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\",
@@ -7654,8 +7654,8 @@
       "RelatedAsset": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "76zxt5xoj8",
-      "Integrity": "T7GeDjl6r2YONPDqTyxDtDRiYFa6yxMWIbgA1+3H3ck=",
+      "Fingerprint": "d74y2axij8",
+      "Integrity": "N3ylnzIb30zMD/lhEbfR1zWv4WV1+tw4jKNErvkoDr4=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -8480,7 +8480,7 @@
       "OriginalItemSpec": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.ComponentModel.Annotations.wasm"
     },
     {
-      "Identity": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\ze09dpxdp5-iwuu0p42xq.gz",
+      "Identity": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\ze09dpxdp5-66821j1f53.gz",
       "SourceId": "MicaelaPortfolio",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\",
@@ -8494,8 +8494,8 @@
       "RelatedAsset": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\bin\\Debug\\net8.0\\wwwroot\\_framework\\MicaelaPortfolio.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "jgzifswg3w",
-      "Integrity": "A+OwRI6gg/scbuVslZni88qwra20cHVvHXwqyI4lwbA=",
+      "Fingerprint": "liipsb4esw",
+      "Integrity": "/ZGEAxe+SjAssfan6ivN4PpsUeXZSbELqiyI76H8qbA=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\bin\\Debug\\net8.0\\wwwroot\\_framework\\MicaelaPortfolio.wasm"
@@ -9187,11 +9187,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "l07j26k5w0",
-      "Integrity": "RUQFEgL1brhDeFyDI+R+onXhdTlKaP2lDk35lDO3zK8=",
+      "Fingerprint": "ixxewb4p5o",
+      "Integrity": "Rk852m7r4/Ba835ci7VduKwR+RyhbcThJpvy2gTWyXc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\js\\netlifyForm.js",
+      "SourceId": "MicaelaPortfolio",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "js/netlifyForm#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pox7gdv6x7",
+      "Integrity": "t4UAPZkYVcCNJ40b7RVqxIyXxDkBXP9J2o7ojrX5GGU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\netlifyForm.js"
     },
     {
       "Identity": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\js\\site.js",
@@ -9235,11 +9256,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3TF9ZLAM5L/o/8kWkKwm3oiXlMikEHV51eohjdDjRaI=\""
+          "Value": "\"t5p0aMHaGCv8o6dlv9XYHRp0bN/ueuoODumFs/8KI7c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 15:31:43 GMT"
+          "Value": "Thu, 08 May 2025 16:18:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9249,13 +9270,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-3TF9ZLAM5L/o/8kWkKwm3oiXlMikEHV51eohjdDjRaI="
+          "Value": "sha256-t5p0aMHaGCv8o6dlv9XYHRp0bN/ueuoODumFs/8KI7c="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\rm7s1ws9k9-bmoe22domg.gz",
+      "AssetFile": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\rm7s1ws9k9-dfexe440e6.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -9274,11 +9295,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"T7GeDjl6r2YONPDqTyxDtDRiYFa6yxMWIbgA1+3H3ck=\""
+          "Value": "\"N3ylnzIb30zMD/lhEbfR1zWv4WV1+tw4jKNErvkoDr4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 15:28:19 GMT"
+          "Value": "Thu, 08 May 2025 15:31:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9298,19 +9319,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"3TF9ZLAM5L/o/8kWkKwm3oiXlMikEHV51eohjdDjRaI=\""
+          "Value": "W/\"t5p0aMHaGCv8o6dlv9XYHRp0bN/ueuoODumFs/8KI7c=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-3TF9ZLAM5L/o/8kWkKwm3oiXlMikEHV51eohjdDjRaI="
+          "Value": "sha256-t5p0aMHaGCv8o6dlv9XYHRp0bN/ueuoODumFs/8KI7c="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\rm7s1ws9k9-bmoe22domg.gz",
+      "AssetFile": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\rm7s1ws9k9-dfexe440e6.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9327,11 +9348,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"T7GeDjl6r2YONPDqTyxDtDRiYFa6yxMWIbgA1+3H3ck=\""
+          "Value": "\"N3ylnzIb30zMD/lhEbfR1zWv4WV1+tw4jKNErvkoDr4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 15:28:19 GMT"
+          "Value": "Thu, 08 May 2025 15:31:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9349,7 +9370,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-T7GeDjl6r2YONPDqTyxDtDRiYFa6yxMWIbgA1+3H3ck="
+          "Value": "sha256-N3ylnzIb30zMD/lhEbfR1zWv4WV1+tw4jKNErvkoDr4="
         }
       ]
     },
@@ -10879,7 +10900,46 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"XixXggF/RDRJ6RO0g/dCCoH0GETfJieNFQrgsVld6dg=\""
+          "Value": "\"9/3urKgcMN26FhTOwSRu5JrKtD/RByFwCrpxk9vx32w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 16:18:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9/3urKgcMN26FhTOwSRu5JrKtD/RByFwCrpxk9vx32w="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/MicaelaPortfolio.pdb",
+      "AssetFile": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\nod4mjap80-l5w9jh2oez.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000032940246"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30357"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YBSFyqP6fego7fA11FGCGXZZMzAM2khFQ+dqvl84Kiw=\""
         },
         {
           "Name": "Last-Modified",
@@ -10888,45 +10948,6 @@
         {
           "Name": "Cache-Control",
           "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-XixXggF/RDRJ6RO0g/dCCoH0GETfJieNFQrgsVld6dg="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/MicaelaPortfolio.pdb",
-      "AssetFile": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\nod4mjap80-y74c8xi5ck.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000032941331"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "30356"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Nxf+EOUkJ1pJaRgunqjtiQLKnjSfoiC/uznir0WXGuU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 15:28:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -10942,19 +10963,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"XixXggF/RDRJ6RO0g/dCCoH0GETfJieNFQrgsVld6dg=\""
+          "Value": "W/\"9/3urKgcMN26FhTOwSRu5JrKtD/RByFwCrpxk9vx32w=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-XixXggF/RDRJ6RO0g/dCCoH0GETfJieNFQrgsVld6dg="
+          "Value": "sha256-9/3urKgcMN26FhTOwSRu5JrKtD/RByFwCrpxk9vx32w="
         }
       ]
     },
     {
       "Route": "_framework/MicaelaPortfolio.pdb.gz",
-      "AssetFile": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\nod4mjap80-y74c8xi5ck.gz",
+      "AssetFile": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\nod4mjap80-l5w9jh2oez.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10963,7 +10984,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "30356"
+          "Value": "30357"
         },
         {
           "Name": "Content-Type",
@@ -10971,11 +10992,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Nxf+EOUkJ1pJaRgunqjtiQLKnjSfoiC/uznir0WXGuU=\""
+          "Value": "\"YBSFyqP6fego7fA11FGCGXZZMzAM2khFQ+dqvl84Kiw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 15:28:18 GMT"
+          "Value": "Thu, 08 May 2025 15:31:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10993,7 +11014,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Nxf+EOUkJ1pJaRgunqjtiQLKnjSfoiC/uznir0WXGuU="
+          "Value": "sha256-YBSFyqP6fego7fA11FGCGXZZMzAM2khFQ+dqvl84Kiw="
         }
       ]
     },
@@ -11016,11 +11037,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"8ruh6t/IAZBjUVSCtk/NnHw4MPKFhyApz9rJzQQOHSU=\""
+          "Value": "\"Is20fJBs4VrHw1TxdEFdKUp4ScDhlrK3P8OWeR+U1qM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 15:31:43 GMT"
+          "Value": "Thu, 08 May 2025 16:18:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11030,13 +11051,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-8ruh6t/IAZBjUVSCtk/NnHw4MPKFhyApz9rJzQQOHSU="
+          "Value": "sha256-Is20fJBs4VrHw1TxdEFdKUp4ScDhlrK3P8OWeR+U1qM="
         }
       ]
     },
     {
       "Route": "_framework/MicaelaPortfolio.wasm",
-      "AssetFile": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\ze09dpxdp5-iwuu0p42xq.gz",
+      "AssetFile": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\ze09dpxdp5-66821j1f53.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -11055,11 +11076,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"A+OwRI6gg/scbuVslZni88qwra20cHVvHXwqyI4lwbA=\""
+          "Value": "\"/ZGEAxe+SjAssfan6ivN4PpsUeXZSbELqiyI76H8qbA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 15:28:18 GMT"
+          "Value": "Thu, 08 May 2025 15:31:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11079,19 +11100,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"8ruh6t/IAZBjUVSCtk/NnHw4MPKFhyApz9rJzQQOHSU=\""
+          "Value": "W/\"Is20fJBs4VrHw1TxdEFdKUp4ScDhlrK3P8OWeR+U1qM=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-8ruh6t/IAZBjUVSCtk/NnHw4MPKFhyApz9rJzQQOHSU="
+          "Value": "sha256-Is20fJBs4VrHw1TxdEFdKUp4ScDhlrK3P8OWeR+U1qM="
         }
       ]
     },
     {
       "Route": "_framework/MicaelaPortfolio.wasm.gz",
-      "AssetFile": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\ze09dpxdp5-iwuu0p42xq.gz",
+      "AssetFile": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\obj\\Debug\\net8.0\\compressed\\ze09dpxdp5-66821j1f53.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11108,11 +11129,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"A+OwRI6gg/scbuVslZni88qwra20cHVvHXwqyI4lwbA=\""
+          "Value": "\"/ZGEAxe+SjAssfan6ivN4PpsUeXZSbELqiyI76H8qbA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 15:28:18 GMT"
+          "Value": "Thu, 08 May 2025 15:31:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11130,7 +11151,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-A+OwRI6gg/scbuVslZni88qwra20cHVvHXwqyI4lwbA="
+          "Value": "sha256-/ZGEAxe+SjAssfan6ivN4PpsUeXZSbELqiyI76H8qbA="
         }
       ]
     },
@@ -39444,7 +39465,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1596"
+          "Value": "1643"
         },
         {
           "Name": "Content-Type",
@@ -39452,11 +39473,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RUQFEgL1brhDeFyDI+R+onXhdTlKaP2lDk35lDO3zK8=\""
+          "Value": "\"Rk852m7r4/Ba835ci7VduKwR+RyhbcThJpvy2gTWyXc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 16:05:06 GMT"
+          "Value": "Thu, 08 May 2025 16:18:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -39466,12 +39487,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-RUQFEgL1brhDeFyDI+R+onXhdTlKaP2lDk35lDO3zK8="
+          "Value": "sha256-Rk852m7r4/Ba835ci7VduKwR+RyhbcThJpvy2gTWyXc="
         }
       ]
     },
     {
-      "Route": "index.l07j26k5w0.html",
+      "Route": "index.ixxewb4p5o.html",
       "AssetFile": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -39481,7 +39502,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1596"
+          "Value": "1643"
         },
         {
           "Name": "Content-Type",
@@ -39489,11 +39510,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RUQFEgL1brhDeFyDI+R+onXhdTlKaP2lDk35lDO3zK8=\""
+          "Value": "\"Rk852m7r4/Ba835ci7VduKwR+RyhbcThJpvy2gTWyXc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 16:05:06 GMT"
+          "Value": "Thu, 08 May 2025 16:18:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -39503,7 +39524,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "l07j26k5w0"
+          "Value": "ixxewb4p5o"
         },
         {
           "Name": "label",
@@ -39511,7 +39532,89 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-RUQFEgL1brhDeFyDI+R+onXhdTlKaP2lDk35lDO3zK8="
+          "Value": "sha256-Rk852m7r4/Ba835ci7VduKwR+RyhbcThJpvy2gTWyXc="
+        }
+      ]
+    },
+    {
+      "Route": "js/netlifyForm.js",
+      "AssetFile": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\js\\netlifyForm.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "647"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t4UAPZkYVcCNJ40b7RVqxIyXxDkBXP9J2o7ojrX5GGU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 15:36:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-t4UAPZkYVcCNJ40b7RVqxIyXxDkBXP9J2o7ojrX5GGU="
+        }
+      ]
+    },
+    {
+      "Route": "js/netlifyForm.pox7gdv6x7.js",
+      "AssetFile": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\js\\netlifyForm.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "647"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t4UAPZkYVcCNJ40b7RVqxIyXxDkBXP9J2o7ojrX5GGU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 15:36:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pox7gdv6x7"
+        },
+        {
+          "Name": "label",
+          "Value": "js/netlifyForm.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-t4UAPZkYVcCNJ40b7RVqxIyXxDkBXP9J2o7ojrX5GGU="
         }
       ]
     },

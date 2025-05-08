@@ -113,6 +113,10 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\js\\netlifyForm.js",
+      "PackagePath": "staticwebassets\\js\\netlifyForm.js"
+    },
+    {
       "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

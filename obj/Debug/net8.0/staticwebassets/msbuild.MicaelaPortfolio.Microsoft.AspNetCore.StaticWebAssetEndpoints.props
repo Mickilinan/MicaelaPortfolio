@@ -315,14 +315,26 @@
     <StaticWebAssetEndpoint Include="index.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-RUQFEgL1brhDeFyDI\u002BR\u002BonXhdTlKaP2lDk35lDO3zK8="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1596"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022RUQFEgL1brhDeFyDI\u002BR\u002BonXhdTlKaP2lDk35lDO3zK8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 07 May 2025 16:05:06 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Rk852m7r4/Ba835ci7VduKwR\u002BRyhbcThJpvy2gTWyXc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1643"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022Rk852m7r4/Ba835ci7VduKwR\u002BRyhbcThJpvy2gTWyXc=\u0022"},{"Name":"Last-Modified","Value":"Thu, 08 May 2025 16:18:02 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="index.l07j26k5w0.html">
+    <StaticWebAssetEndpoint Include="index.ixxewb4p5o.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"l07j26k5w0"},{"Name":"integrity","Value":"sha256-RUQFEgL1brhDeFyDI\u002BR\u002BonXhdTlKaP2lDk35lDO3zK8="},{"Name":"label","Value":"index.html"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1596"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022RUQFEgL1brhDeFyDI\u002BR\u002BonXhdTlKaP2lDk35lDO3zK8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 07 May 2025 16:05:06 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ixxewb4p5o"},{"Name":"integrity","Value":"sha256-Rk852m7r4/Ba835ci7VduKwR\u002BRyhbcThJpvy2gTWyXc="},{"Name":"label","Value":"index.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1643"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022Rk852m7r4/Ba835ci7VduKwR\u002BRyhbcThJpvy2gTWyXc=\u0022"},{"Name":"Last-Modified","Value":"Thu, 08 May 2025 16:18:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="js/netlifyForm.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\netlifyForm.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-t4UAPZkYVcCNJ40b7RVqxIyXxDkBXP9J2o7ojrX5GGU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"647"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022t4UAPZkYVcCNJ40b7RVqxIyXxDkBXP9J2o7ojrX5GGU=\u0022"},{"Name":"Last-Modified","Value":"Thu, 08 May 2025 15:36:50 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="js/netlifyForm.pox7gdv6x7.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\netlifyForm.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"pox7gdv6x7"},{"Name":"integrity","Value":"sha256-t4UAPZkYVcCNJ40b7RVqxIyXxDkBXP9J2o7ojrX5GGU="},{"Name":"label","Value":"js/netlifyForm.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"647"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022t4UAPZkYVcCNJ40b7RVqxIyXxDkBXP9J2o7ojrX5GGU=\u0022"},{"Name":"Last-Modified","Value":"Thu, 08 May 2025 15:36:50 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
