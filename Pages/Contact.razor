@@ -58,15 +58,8 @@
         </div>
 
         <div class="contact-form" data-aos="fade-left">
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                <input type="text" name="name" />
-                <input type="email" name="email" />
-                <input type="text" name="subject" />
-                <textarea name="message"></textarea>
-            </form>
             <EditForm Model="@contactForm" OnValidSubmit="@HandleValidSubmit">
                 <DataAnnotationsValidator />
-
                 @if (isSubmitted)
                 {
                     <div class="form-success">
@@ -113,7 +106,6 @@
 
     private async Task HandleValidSubmit()
     {
-        // Skapa ett dictionary med fälten
         var formData = new Dictionary<string, string>
         {
             { "form-name", "contact" },
@@ -123,7 +115,6 @@
             { "message", contactForm.Message }
         };
 
-        // Skicka till Netlify via JS
         await JSRuntime.InvokeVoidAsync("submitNetlifyForm", formData);
         isSubmitted = true;
         contactForm = new ContactForm();
