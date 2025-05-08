@@ -480,8 +480,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ixxewb4p5o</Fingerprint>
-      <Integrity>Rk852m7r4/Ba835ci7VduKwR+RyhbcThJpvy2gTWyXc=</Integrity>
+      <Fingerprint>lbh0ekvnml</Fingerprint>
+      <Integrity>saVwJGTC5vQFKUqCM2edFEYua8xfESMvOCG7Jed9HtQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</OriginalItemSpec>
@@ -498,8 +498,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>pox7gdv6x7</Fingerprint>
-      <Integrity>t4UAPZkYVcCNJ40b7RVqxIyXxDkBXP9J2o7ojrX5GGU=</Integrity>
+      <Fingerprint>mw3fu4dr21</Fingerprint>
+      <Integrity>hr9AForBHjVDghS3OMTDfHS6wBfCTMYcUi7SRjMw6gk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\netlifyForm.js'))</OriginalItemSpec>
