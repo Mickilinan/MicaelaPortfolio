@@ -31,14 +31,14 @@
                     <h3>@project.Title</h3>
                     <p class="project-description">@project.Description</p>
                     <div class="project-tech">
-                        @foreach (var tech in project.Technologies.Take(3))
+                        @foreach (var tech in project.Technologies)
                         {
                             <span class="tech-tag">@tech</span>
                         }
-                        @if (project.Technologies.Count > 3)
+                        @* @if (project.Technologies.Count > 3)
                         {
                             <span class="tech-tag">+@(project.Technologies.Count - 3)</span>
-                        }
+                        } *@
                     </div>
                     <div class="project-links">
 

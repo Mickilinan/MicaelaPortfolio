@@ -1030,6 +1030,7 @@ C:\Users\micni\Desktop\MicaelaPortfolio\obj\Debug\net8.0\MicaelaPortfolio.dll
 C:\Users\micni\Desktop\MicaelaPortfolio\obj\Debug\net8.0\refint\MicaelaPortfolio.dll
 C:\Users\micni\Desktop\MicaelaPortfolio\obj\Debug\net8.0\MicaelaPortfolio.pdb
 C:\Users\micni\Desktop\MicaelaPortfolio\obj\Debug\net8.0\ref\MicaelaPortfolio.dll
-C:\Users\micni\Desktop\MicaelaPortfolio\obj\Debug\net8.0\compressed\ze09dpxdp5-c9hv0stvf3.gz
-C:\Users\micni\Desktop\MicaelaPortfolio\obj\Debug\net8.0\compressed\nod4mjap80-3jm49srwog.gz
-C:\Users\micni\Desktop\MicaelaPortfolio\obj\Debug\net8.0\compressed\rm7s1ws9k9-ac5io90k4z.gz
+C:\Users\micni\Desktop\MicaelaPortfolio\obj\Debug\net8.0\MicaelaPortfolio.sourcelink.json
+C:\Users\micni\Desktop\MicaelaPortfolio\obj\Debug\net8.0\compressed\ze09dpxdp5-iwuu0p42xq.gz
+C:\Users\micni\Desktop\MicaelaPortfolio\obj\Debug\net8.0\compressed\nod4mjap80-y74c8xi5ck.gz
+C:\Users\micni\Desktop\MicaelaPortfolio\obj\Debug\net8.0\compressed\rm7s1ws9k9-bmoe22domg.gz

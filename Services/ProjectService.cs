@@ -17,8 +17,8 @@ public class ProjectService
                     Description = "Administrative portal for the educational game Count On Me.",
                     DetailedDescription = "Developed a comprehensive administrative portal for the educational game 'Count On Me'. This portal allows administrators to manage user accounts and customize game settings. The system was built with scalability in mind to accommodate growing user numbers and additional features.",
                     Category = "professional",
-                    IconClass = "fas fa-laptop-code",
-                    Technologies = new List<string> { "React", "TypeScript", "Prisma", "PostGreSQL", "TailwindCSS", "Entity Framework" },
+                    IconClass = "fas fa-toolbox",
+                    Technologies = new List<string> { "React", "TypeScript", "Prisma", "PostGreSQL", "TailwindCSS" },
                     LiveUrl = "https://www.akribian.com/count-on-me",
                     Features = new List<string>
                     {
@@ -52,8 +52,8 @@ public class ProjectService
                     Description = "School project focusing on content management systems using Umbraco.",
                     DetailedDescription = "This school project involved creating a fully functional website using Umbraco CMS. The goal was to demonstrate proficiency in content management systems while building a responsive, user-friendly website. The project included custom document types, templates, and macros to create a flexible content structure.",
                     Category = "school",
-                    IconClass = "fas fa-server",
-                    Technologies = new List<string> { "C#", ".NET", "Umbraco", "HTML", "CSS", "JavaScript" },
+                    IconClass = "fas fa-file-alt",
+                    Technologies = new List<string> { "C#", ".NET", "Umbraco","Azure", "HTML", "CSS",  },
                     GitHubUrl = "https://github.com/Mickilinan/CMSUmbraco",
                     Features = new List<string>
                     {
@@ -86,8 +86,8 @@ public class ProjectService
                     Description = "School project using advanced backend technologies.",
                     DetailedDescription = "This backend project focused on building a robust API and database architecture for a fictional e-commerce platform. The system was designed to handle product management, user authentication, order processing, and inventory tracking. Special attention was paid to performance optimization and security considerations.",
                     Category = "school",
-                    IconClass = "fas fa-project-diagram",
-                    Technologies = new List<string> { "C#", ".NET", "SQL", "Entity Framework", "REST API", "Azure" },
+                    IconClass = "fas fa-server",
+                    Technologies = new List<string> { "C#", ".NET", "Blazor", "GraphQL", "WebSockets", "REST API", "Azure", "Microservices", "HTML", "CSS" },
                     GitHubUrl = "https://github.com/silicon-jsb/SiliconBackoffice",
                     Features = new List<string>
                     {
@@ -117,11 +117,11 @@ public class ProjectService
                 {
                     Id = 4,
                     Title = "Shared Silicon",
-                    Description = "Full-stack development project using ASP .NET Core MVC.",
+                    Description = "School project, full-stack development using ASP .NET Core MVC.",
                     DetailedDescription = "Shared Silicon was a collaborative school project to create a full-stack web application for a fictional technology marketplace. The application allows users to browse products, create accounts, manage their shopping cart, and complete purchases. The project demonstrated the team's ability to work with ASP.NET Core MVC architecture and implement both frontend and backend functionality.",
                     Category = "school",
-                    IconClass = "fab fa-windows",
-                    Technologies = new List<string> { "C#", "ASP.NET Core", "MVC", "SQL", "Entity Framework", "Bootstrap" },
+                    IconClass = "fas fa-layer-group",
+                    Technologies = new List<string> { "C#", "ASP.NET Core", "MVC", "Entity Framework", "SQL", "SCSS", "HTML", "JavaScript" },
                     GitHubUrl = "https://github.com/sarahk189/SharedSilicon",
                     Features = new List<string>
                     {
@@ -151,11 +151,11 @@ public class ProjectService
                 {
                     Id = 5,
                     Title = "Database Project",
-                    Description = "Database design and implementation project.",
+                    Description = "School project, database design and implementation.",
                     DetailedDescription = "This project focused on designing and implementing a relational database for a library management system. The database was designed to track books, patrons, loans, reservations, and other library operations. The project included creating the database schema, writing stored procedures, implementing triggers, and developing a simple console application to interact with the database.",
                     Category = "school",
                     IconClass = "fas fa-database",
-                    Technologies = new List<string> { "C#", "SQL", "Entity Framework", "SSMS", "T-SQL" },
+                    Technologies = new List<string> { "C#", ".NET", "Entity Framework Core", "SQL", "SSMS" },
                     GitHubUrl = "https://github.com/Mickilinan/ConsoleApp",
                     Features = new List<string>
                     {
@@ -185,11 +185,11 @@ public class ProjectService
                 {
                     Id = 6,
                     Title = "JavaScript Frontend",
-                    Description = "Modern frontend development project using React.",
+                    Description = "School project, modern frontend development using React.",
                     DetailedDescription = "This frontend project involved creating a modern, responsive web application using React. The application was a dashboard for a fictional analytics platform, featuring interactive charts, data tables, and user management interfaces. The project demonstrated proficiency in modern JavaScript frameworks and responsive design principles.",
                     Category = "school",
                     IconClass = "fab fa-js-square",
-                    Technologies = new List<string> { "JavaScript", "React", "HTML", "CSS", "Redux", "Chart.js" },
+                    Technologies = new List<string> { "JavaScript", "React" },
                     GitHubUrl = "https://github.com/Mickilinan/jsfrontend",
                     Features = new List<string>
                     {

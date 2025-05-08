@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "MicaelaPortfolio",
   "resources": {
-    "hash": "sha256-LhSvphe/dF7HNQq32dVdGDzMgJmOyDCK/zcrCelW8q0=",
+    "hash": "sha256-t07A+TXZNEIPRInjZhRvcGjma/WX29dzSS6KlJPY60o=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-DTUQS6Jc6BNnS7sYYezFfaUKVmQq0/lanhQuJfygH/k="
     },
@@ -209,10 +209,10 @@
       "mscorlib.wasm": "sha256-8L4O6tiH48gEZfzf0Y84J01S+3eEG59Bo5bfpH2H+9Y=",
       "netstandard.wasm": "sha256-sEvS/ZjfGhf1dLglmk72ysM50loOygjujJ/J5OhFLEw=",
       "System.Private.CoreLib.wasm": "sha256-BhHYDTpkph+YJOQuAlv6aSrvjTVX0WLTIDBXecinFXo=",
-      "MicaelaPortfolio.wasm": "sha256-IOlZyfo0XpQpbAIF+SFhFgcPK3LFP9Pc1f0JgTcsEhE="
+      "MicaelaPortfolio.wasm": "sha256-8ruh6t/IAZBjUVSCtk/NnHw4MPKFhyApz9rJzQQOHSU="
     },
     "pdb": {
-      "MicaelaPortfolio.pdb": "sha256-8WslJCVy4k3ypoMUpPoYsKfXJGViNGWvZFUj7YeW5j4="
+      "MicaelaPortfolio.pdb": "sha256-XixXggF/RDRJ6RO0g/dCCoH0GETfJieNFQrgsVld6dg="
     }
   },
   "cacheBootResources": true,

@@ -53,7 +53,7 @@
     justify-content: space-between;
     width: 100%;
     padding: 0 2rem;
-    height: 70px;
+    height: 60px;
     background: rgba(44, 53, 49, 0.95);
     box-shadow: 0 2px 12px rgba(17,100,102,0.08);
     position: sticky;
@@ -98,7 +98,7 @@
     gap: 0.5rem;
     color: var(--foreground);
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 0.5rem 1rem;
     border-radius: var(--border-radius);
     transition: background-color var(--transition-speed), color var(--transition-speed);
@@ -110,7 +110,7 @@
 }
 
 .nav-links i {
-    width: 1.25rem;
+    width: 1rem;
     text-align: center;
 }
 
