@@ -105,8 +105,20 @@
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\images\\blacklogo.png",
+      "PackagePath": "staticwebassets\\images\\blacklogo.png"
+    },
+    {
       "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\images\\cartoonme.jpeg",
       "PackagePath": "staticwebassets\\images\\cartoonme.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\images\\mnlogo.png",
+      "PackagePath": "staticwebassets\\images\\mnlogo.png"
+    },
+    {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\images\\whitelogo.png",
+      "PackagePath": "staticwebassets\\images\\whitelogo.png"
     },
     {
       "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\index.html",

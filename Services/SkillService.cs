@@ -22,6 +22,9 @@ public class SkillService
                 // Backend Skills
                 new Skill { Id = 7, Name = "C#", Category = "backend", ProficiencyLevel = 90, IconPath = "/images/skills/csharp.png" },
                 new Skill { Id = 8, Name = "ASP .NET Core", Category = "backend", ProficiencyLevel = 85, IconPath = "/images/skills/dotnet.png" },
+                new Skill { Id = 17, Name = "PostgreSQL", Category = "backend", ProficiencyLevel = 70, IconPath = "/images/skills/postgresql.png" },
+                new Skill { Id = 19, Name = "Prisma ORM", Category = "backend", ProficiencyLevel = 60, IconPath = "/images/skills/prisma.png" },
+                new Skill { Id = 20, Name = "GraphQL", Category = "backend", ProficiencyLevel = 30, IconPath = "/images/skills/graphql.png" },
                 new Skill { Id = 16, Name = "Node.js", Category = "backend", ProficiencyLevel = 40, IconPath = "/images/skills/nodejs.png" },
                 new Skill { Id = 9, Name = "SQL Server", Category = "backend", ProficiencyLevel = 70, IconPath = "/images/skills/sql.png" },
                 new Skill { Id = 10, Name = "Entity Framework", Category = "backend", ProficiencyLevel = 70, IconPath = "/images/skills/ef.png" },
@@ -33,7 +36,7 @@ public class SkillService
                 new Skill { Id = 14, Name = "GitHub", Category = "other", ProficiencyLevel = 85, IconPath = "/images/skills/git.png" },
                 new Skill { Id = 13, Name = "Umbraco", Category = "other", ProficiencyLevel = 50, IconPath = "/images/skills/umbraco.png" },
                 new Skill { Id = 18, Name = "ClickUp", Category = "other", ProficiencyLevel = 85, IconPath = "/images/skills/microsoft.png" },
-                new Skill { Id = 11, Name = "Azure", Category = "other", ProficiencyLevel = 40, IconPath = "/images/skills/azure.png" },
+                new Skill { Id = 11, Name = "Azure", Category = "other", ProficiencyLevel = 30, IconPath = "/images/skills/azure.png" },
 
             };
     }
