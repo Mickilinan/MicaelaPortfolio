@@ -1,5 +1,4 @@
-﻿
-// Hero section styles
+﻿// Hero section styles
 
 .hero-section {
     padding: 4rem 0;
@@ -31,7 +30,7 @@
 
     p {
         font-size: 1.25rem;
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
     }
 }
 
@@ -44,67 +43,13 @@
 }
 
 .hero-image {
-    flex: 1;
-    @include flex(row, center, center);
-
-    img {
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-        object-fit: cover;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-}
-
-.hero-section {
-    padding: 4rem 0;
-}
-
-.hero-content {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-
-    @media (max-width: 992px) {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-.hero-text {
-    flex: 1;
-
-    h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-    }
-
-    h2 {
-        font-size: 1.75rem;
-        color: var(--muted-foreground);
-        margin-bottom: 1rem;
-    }
-
-    p {
-        font-size: 1.25rem;
-        margin-bottom: 2rem;
-    }
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-
-    @media (max-width: 992px) {
-        justify-content: center;
-    }
-}
-
-.hero-image {
     position: relative;
     flex: 1;
     display: flex;
     justify-content: center;
+    background: #175e63;
+    min-height: 300px;
+    border-radius: 50%;
 
     img {
         width: 300px;
@@ -130,7 +75,50 @@
         filter: blur(40px);
         opacity: 0.6;
     }
-} 
+}
+
+.badge-available {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: #1abc9c;
+    color: #fff;
+    padding: 0.4em 1em;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 0 32px 12px #1abc9ccc, 0 2px 8px rgba(0,0,0,0.10);
+    z-index: 3;
+    letter-spacing: 0.5px;
+    animation: badge-glow-pulse 1.5s infinite alternate;
+}
+
+@keyframes badge-glow-pulse {
+    0% { box-shadow: 0 0 32px 12px #1abc9ccc, 0 2px 8px rgba(0,0,0,0.10); }
+    100% { box-shadow: 0 0 64px 24px #1abc9cff, 0 2px 8px rgba(0,0,0,0.10); }
+}
+
+.badge-glow {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-glow::before {
+    content: "";
+    position: absolute;
+    top: -18px; left: -32px; right: -32px; bottom: -18px;
+    border-radius: 40px;
+    background: radial-gradient(circle, #1abc9c 0%, transparent 80%);
+    opacity: 0.5;
+    filter: blur(18px);
+    z-index: -1;
+    animation: badge-glow-pulse 2s infinite alternate;
+}
 
 // Featured Projects Section
 .featured-projects {
@@ -152,7 +140,7 @@
 
 // Skills Highlight Section
 .skills-highlight {
-    padding: 4rem 0;
+    padding: 10rem 0;
 
     .section-title {
         font-size: 2rem;
@@ -241,4 +229,15 @@
             color: var(--primary);
         }
     }
+}
+
+.available {
+    background: #1abc9c;
+    color: #fff;
+    border-radius: 6px;
+    padding: 0.2em 0.6em;
+    font-size: 0.9em;
+    margin-left: 0.5em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
 }

@@ -18,7 +18,7 @@ public class ProjectService
                     DetailedDescription = "Developed a comprehensive administrative portal for the educational game 'Count On Me'. This portal allows administrators to manage user accounts and customize game settings. The system was built with scalability in mind to accommodate growing user numbers and additional features.",
                     Category = "professional",
                     IconClass = "fas fa-toolbox",
-                    Technologies = new List<string> { "React", "TypeScript", "Prisma", "PostGreSQL", "TailwindCSS" },
+                    Technologies = new List<string> { "React", "TypeScript", "Prisma", "PostGreSQL", "TailwindCSS", "REST API (Express.js)" },
                     LiveUrl = "https://www.akribian.com/count-on-me",
                     Features = new List<string>
                     {
@@ -121,7 +121,7 @@ public class ProjectService
                     DetailedDescription = "Shared Silicon was a collaborative school project to create a full-stack web application for a fictional technology marketplace. The application allows users to browse products, create accounts, manage their shopping cart, and complete purchases. The project demonstrated the team's ability to work with ASP.NET Core MVC architecture and implement both frontend and backend functionality.",
                     Category = "school",
                     IconClass = "fas fa-layer-group",
-                    Technologies = new List<string> { "C#", "ASP.NET Core", "MVC", "Entity Framework", "SQL", "SCSS", "HTML", "JavaScript" },
+                    Technologies = new List<string> { "C#", "ASP.NET Core", "MVC", "Entity Framework", "SQL", "SCSS", "HTML", "JavaScript", "REST API" },
                     GitHubUrl = "https://github.com/sarahk189/SharedSilicon",
                     Features = new List<string>
                     {

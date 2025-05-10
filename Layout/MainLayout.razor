@@ -1,5 +1,6 @@
 ﻿@inherits LayoutComponentBase
 @inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
 
 <div class="app-container">
     <NavMenu />
@@ -10,12 +11,15 @@
            
         </div>
 
+        <button class="back-to-top" @onclick="ScrollToTop" title="Back to top">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+
         <footer class="app-footer">
             <div class="footer-content">
                 <div class="footer-logo" style="display: flex; align-items: center; gap: 0.75rem;">
-                    <img src="/images/mnlogo.png" alt="Micaela Nilsson Logo" style="height:32px; width:auto;" />
                     <div class="footer-copyright">
-                        <p>&copy; @DateTime.Now.Year Micaela Nilsson. All rights reserved.</p>
+                        <p> @DateTime.Now.Year &copy; Designed and built by Micaela Nilsson.</p>
                     </div>
                 </div>
                 <div class="footer-social">
@@ -33,9 +37,16 @@
 
 @code {
     private bool isDarkTheme = false;
+    private bool shouldScrollToTop = false;
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
+        if (shouldScrollToTop)
+        {
+            await JSRuntime.InvokeVoidAsync("window.scrollTo", 0, 0);
+            shouldScrollToTop = false;
+        }
+
         if (firstRender)
         {
             // Initialize AOS (Animate on Scroll)
@@ -70,4 +81,17 @@
     }
 
     void LogClick() => Console.WriteLine("App-knapp");
+
+    private async Task ScrollToTop()
+    {
+        await JSRuntime.InvokeVoidAsync("window.scrollTo", new object[] { 0, 0 });
+    }
+
+    protected override void OnInitialized()
+    {
+        NavigationManager.LocationChanged += (sender, args) =>
+        {
+            shouldScrollToTop = true;
+        };
+    }
 }

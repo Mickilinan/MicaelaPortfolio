@@ -97,6 +97,10 @@
       "PackagePath": "staticwebassets\\css\\pages\\_skills.scss"
     },
     {
+      "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
       "Id": "C:\\Users\\micni\\Desktop\\MicaelaPortfolio\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },

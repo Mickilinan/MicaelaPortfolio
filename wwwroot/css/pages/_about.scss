@@ -71,8 +71,11 @@
 }
 
 .about-text {
-    margin-bottom: 2rem;
-    line-height: 1.8;
+    padding-bottom: 2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.7;
+    font-size: 1.08rem;
     color: var(--foreground);
     max-width: none;
 
@@ -100,6 +103,11 @@
             opacity: 0.8;
             border-bottom-width: 2px;
         }
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 1rem;
+        text-align: center;
     }
 }
 

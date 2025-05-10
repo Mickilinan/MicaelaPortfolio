@@ -1,39 +1,41 @@
 ﻿@inject NavigationManager NavigationManager
 
 <nav class="topnav">
-    <div class="nav-left">
-        <a href="/" class="logo">
-            <img src="images/whitelogo.png" alt="Micaela Nilsson Logo" class="nav-logo" />
-            
-        </a>
-    </div>
-    <div class="nav-center"></div>
-    <div class="nav-right">
-        <button class="menu-toggle" @onclick="ToggleMenu">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="nav-links @(isMenuOpen ? "open" : "")">
-            <NavLink href="" Match="NavLinkMatch.All" @onclick="CloseMenu">
-                <i class="fas fa-home"></i> <span>Home</span>
-            </NavLink>
-            <NavLink href="about" @onclick="CloseMenu">
-                <i class="fas fa-user"></i> <span>About</span>
-            </NavLink>
-            <NavLink href="skills" @onclick="CloseMenu">
-                <i class="fas fa-code"></i> <span>Skills</span>
-            </NavLink>
-            <NavLink href="projects" @onclick="CloseMenu">
-                <i class="fas fa-project-diagram"></i> <span>Projects</span>
-            </NavLink>
-            <NavLink href="contact" @onclick="CloseMenu">
-                <i class="fas fa-envelope"></i> <span>Contact</span>
-            </NavLink>
-            <a href="https://github.com/Mickilinan" target="_blank" class="social-link">
-                <i class="fab fa-github"></i>
+    <div class="nav-content">
+        <div class="nav-left">
+            <a href="/" class="logo">
+                <img src="images/whitelogo.png" alt="Micaela Nilsson Logo" class="nav-logo" />
+                
             </a>
-            <a href="https://www.linkedin.com/in/micaela-nilsson-476394283/" target="_blank" class="social-link">
-                <i class="fab fa-linkedin"></i>
-            </a>
+        </div>
+        <div class="nav-center"></div>
+        <div class="nav-right">
+            <button class="menu-toggle" @onclick="ToggleMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links @(isMenuOpen ? "open" : "")">
+                <NavLink href="" Match="NavLinkMatch.All" @onclick="CloseMenu">
+                    <i class="fas fa-home"></i> <span>Home</span>
+                </NavLink>
+                <NavLink href="about" @onclick="CloseMenu">
+                    <i class="fas fa-user"></i> <span>About</span>
+                </NavLink>
+                <NavLink href="skills" @onclick="CloseMenu">
+                    <i class="fas fa-code"></i> <span>Skills</span>
+                </NavLink>
+                <NavLink href="projects" @onclick="CloseMenu">
+                    <i class="fas fa-project-diagram"></i> <span>Projects</span>
+                </NavLink>
+                <NavLink href="contact" @onclick="CloseMenu">
+                    <i class="fas fa-envelope"></i> <span>Contact</span>
+                </NavLink>
+                @* <a href="https://github.com/Mickilinan" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/micaela-nilsson-476394283/" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a> *@
+            </div>
         </div>
     </div>
 </nav>
