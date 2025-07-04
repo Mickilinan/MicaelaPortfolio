@@ -2,6 +2,14 @@
     @include button-base;
 }
 
+// Global button focus reset
+button:focus,
+button:focus-visible,
+.btn:focus,
+.btn:focus-visible {
+    outline: none !important;
+}
+
 // Button styles
 .btn-primary,
 .btn-outline,
@@ -23,6 +31,12 @@
     &:hover {
         background-color: var(--primary-hover);
     }
+
+    &:focus,
+    &:focus-visible {
+        outline: none !important;
+        box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.3) !important;
+    }
 }
 
 .btn-outline {
@@ -32,6 +46,14 @@
 
     &:hover {
         background-color: var(--muted);
+        color: white;
+    }
+
+    &:focus,
+    &:focus-visible {
+        outline: none !important;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.3) !important;
     }
 }
 
@@ -42,6 +64,12 @@
 
     &:hover {
         background-color: var(--accent);
+    }
+
+    &:focus,
+    &:focus-visible {
+        outline: none !important;
+        box-shadow: 0 0 0 2px rgba(var(--secondary-rgb), 0.3) !important;
     }
 }
 

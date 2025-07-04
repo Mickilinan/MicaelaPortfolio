@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+// Remove default focus outlines
+*:focus {
+    outline: none !important;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: radial-gradient(ellipse at 60% 40%, #116466 0%, #2C3531 100%) !important;
@@ -34,4 +39,9 @@ button {
     background: none;
     font: inherit;
     color: inherit;
+    
+    &:focus,
+    &:focus-visible {
+        outline: none !important;
+    }
 }

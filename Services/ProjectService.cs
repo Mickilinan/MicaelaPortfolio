@@ -126,9 +126,6 @@ public class ProjectService
                     Features = new List<string>
                     {
                         "User authentication and profile management",
-                        "Product catalog with search and filtering",
-                        "Shopping cart and checkout process",
-                        "Order history and tracking",
                         "Admin panel for product and user management"
                     },
                     Images = new List<string> { "/images/projects/shared-silicon-1.jpg", "/images/projects/shared-silicon-2.jpg" },

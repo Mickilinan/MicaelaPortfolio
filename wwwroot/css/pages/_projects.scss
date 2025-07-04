@@ -48,6 +48,18 @@
     }
 }
 
+.project-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
 .project-header {
     padding: 1.5rem;
     display: flex;
@@ -90,6 +102,7 @@
     margin-bottom: 1rem;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }

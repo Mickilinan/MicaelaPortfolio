@@ -1,6 +1,10 @@
 ﻿// Color Palette
 $colors: ( 'dark': #2C3531, 'teal': #116466, 'beige': #D9B08C, 'apricot': #FFCB9A, 'mint': #D1E8E2 );
 
+// RGB values for transparency
+$primary-rgb: 17, 100, 102; // #116466
+$secondary-rgb: 217, 176, 140; // #D9B08C
+
 // Theme Variables
 $theme: ( 'background': #2C3531, // body background
 'foreground': #D1E8E2, // text

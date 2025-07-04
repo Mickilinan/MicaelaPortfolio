@@ -28,4 +28,8 @@
     @each $name, $value in $layout {
         --#{$name}: #{$value};
     }
+
+    // RGB variables for transparency
+    --primary-rgb: #{$primary-rgb};
+    --secondary-rgb: #{$secondary-rgb};
 } 
