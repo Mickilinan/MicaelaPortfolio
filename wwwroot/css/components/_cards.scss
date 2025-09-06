@@ -8,9 +8,63 @@
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     }
 
+    &.has-screenshots {
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+        }
+    }
+
     .project-header {
         padding: 1.5rem;
         @include flex(row, space-between, flex-start);
+
+        .project-badges {
+            @include flex(column, flex-start, flex-end);
+            gap: 0.5rem;
+        }
+    }
+
+    .screenshot-badge {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+        color: var(--card);
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.75rem;
+        font-size: 0.75rem;
+        font-weight: 500;
+        @include flex(row, center, center, 0.25rem);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+      
+    }
+
+    .project-screenshot-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 120px;
+        height: 48px;
+        font-size: 1rem;
+        cursor: pointer;
+        gap: 0.5rem;
+
+        .screenshot-text {
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+    }
+
+    .screenshot-indicator {
+        @include icon-circle(36px);
+        background-color: rgba(var(--primary-rgb), 0.1);
+        color: var(--primary);
+        @include transition(all);
+
+        &:hover {
+            background-color: var(--primary);
+            color: var(--card-foreground);
+        }
     }
 
     .project-icon {

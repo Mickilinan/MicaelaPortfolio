@@ -1,0 +1,83 @@
+﻿@using MicaelaPortfolio.Models
+@inject IJSRuntime JSRuntime
+
+@if (Project?.Screenshots?.Any() == true && IsVisible)
+{
+    <div class="modal-backdrop" @onclick="CloseModal">
+        <div class="modal-content" @onclick:stopPropagation="true">
+            <div class="modal-header">
+                <h2>@Project.Title</h2>
+                <button class="modal-close-x" @onclick="CloseModal" title="Stäng">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+               
+                <div class="main-image-container">
+                    <img src="@selectedImage" alt="Screenshot of @Project.Title" class="main-screenshot" />
+                </div>
+
+             
+                @if (Project.Screenshots.Any())
+                {
+                    <div class="thumbnails-container">
+                        @foreach (var img in Project.Screenshots)
+                        {
+                            <div class="thumbnail @(img == selectedImage ? "active" : "")"
+                                 @onclick="() => SelectImage(img)">
+                                <img src="@img" alt="Thumbnail" class="thumbnail-img" />
+                            </div>
+                        }
+                    </div>
+                }
+
+             
+                <div class="project-info">
+
+                    <div class="project-technologies-links">
+                        <div class="project-technologies">
+                            @foreach (var tech in Project.Technologies)
+                            {
+                                <span class="tech-tag">@tech</span>
+                            }
+                        </div>
+                        @if (!string.IsNullOrEmpty(Project.GitHubUrl))
+                        {
+                            <a href="@Project.GitHubUrl" target="_blank" class="project-link" title="View on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] public Project? Project { get; set; }
+    [Parameter] public bool IsVisible { get; set; }
+    [Parameter] public EventCallback OnClose { get; set; }
+
+    private string selectedImage = "";
+
+    protected override void OnParametersSet()
+    {
+        if (Project?.Screenshots?.Any() == true && string.IsNullOrEmpty(selectedImage))
+        {
+            selectedImage = Project.Screenshots.First();
+        }
+    }
+
+    private void SelectImage(string imageUrl)
+    {
+        selectedImage = imageUrl;
+    }
+
+    private async Task CloseModal()
+    {
+        selectedImage = "";
+        await OnClose.InvokeAsync();
+    }
+}

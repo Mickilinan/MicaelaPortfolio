@@ -1,0 +1,165 @@
+﻿.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    @include flex(row, center, center);
+    padding: 1rem;
+}
+
+.modal-content {
+    @include card;
+    padding: 0;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    //@include flex(column);
+}
+
+.modal-header {
+    @include flex(row, space-between, center);
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border);
+
+    h2 {
+        margin: 0;
+        color: var(--card-foreground);
+    }
+}
+
+.modal-close-x {
+    @include icon-circle(40px);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--muted-foreground);
+    @include transition(background-color);
+
+    &:hover {
+        background-color: var(--muted);
+    }
+}
+
+.modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+}
+
+
+.main-image-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+
+.main-screenshot {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnails-container {
+    @include flex(row, center, center, 0.75rem);
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    overflow-x: auto;
+}
+
+.thumbnail {
+    flex-shrink: 0;
+    width: 80px;
+    height: 60px;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 3px solid transparent;
+    @include transition(all);
+
+    &:hover {
+        border-color: var(--primary);
+        transform: scale(1.05);
+    }
+
+    &.active {
+        border-color: var(--primary);
+        box-shadow: 0 0 10px rgba(var(--primary-rgb), 0.3);
+    }
+}
+
+.thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.project-info {
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+}
+
+.project-technologies-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+    .project-technologies {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .project-link {
+        font-size: 1.5rem;
+        color: var(--muted-foreground);
+        transition: color var(--transition-speed);
+
+        &:hover {
+            color: var(--primary);
+        }
+    }
+}
+
+    
+    @include breakpoint(md) {
+        .modal-content {
+            max-width: 95vw;
+            max-height: 95vh;
+        }
+
+        .modal-header,
+        .modal-body {
+            padding: 1rem;
+        }
+
+        .thumbnails-container {
+            gap: 0.5rem;
+        }
+
+        .thumbnail {
+            width: 60px;
+            height: 45px;
+        }
+
+        .main-screenshot {
+            max-height: 50vh;
+        }
+
+        .project-links {
+            flex-direction: column;
+
+            .project-link {
+                justify-content: center;
+            }
+        }
+    }

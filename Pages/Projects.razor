@@ -5,7 +5,6 @@
 @inject IJSRuntime JSRuntime
 @inject NavigationManager NavigationManager
 
-
 <PageTitle>Projects | Micaela Nilsson</PageTitle>
 
 <div class="page-header">
@@ -17,17 +16,31 @@
     <div class="projects-grid">
         @foreach (var project in filteredProjects)
         {
-            <div class="project-card" data-aos="fade-up" data-aos-delay="@(project.Id * 100)" 
-                 @onclick="() => OpenProject(project)" 
-                 style="@(HasClickableLink(project) ? "cursor: pointer;" : "")">
+            <div class="project-card @(project.Screenshots?.Any() == true ? "has-screenshots" : "")"
+                 data-aos="fade-up" data-aos-delay="@(project.Id * 100)"
+                 @onclick="() => OpenProject(project)"
+                 style="@(HasClickableLink(project) || project.Screenshots?.Any() == true ? "cursor: pointer;" : "")">
                 <div class="project-header">
-                    <div class="project-icon">
-                        <i class="@project.IconClass"></i>
-                    </div>
-                    @if (!string.IsNullOrEmpty(project.Badge))
+                    @if (project.Screenshots?.Any() == true)
                     {
-                        <span class="project-badge">@project.Badge</span>
+                        <span class="screenshot-badge project-screenshot-badge">
+                            <i class="fas fa-images"></i>
+                            <span class="screenshot-text">View screenshots</span>
+                        </span>
                     }
+                    else
+                    {
+                        <div class="project-icon">
+                            <i class="@project.IconClass"></i>
+                        </div>
+                    }
+                    <div class="project-badges">
+                        @if (!string.IsNullOrEmpty(project.Badge))
+                        {
+                            <span class="project-badge">@project.Badge</span>
+                        }
+                      
+                    </div>
                 </div>
                 <div class="project-content">
                     <h3>@project.Title</h3>
@@ -53,6 +66,7 @@
                                 </a>
                             }
                         </div>
+      
                     </div>
                 </div>
             </div>
@@ -63,13 +77,10 @@
 @code {
     private List<Project> filteredProjects = new List<Project>();
 
-
     protected override void OnInitialized()
     {
         filteredProjects = projectService.GetProjects();
     }
-
-
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -79,18 +90,37 @@
         }
     }
 
-    private async Task OpenProject(Project project)
-    {
-        string urlToOpen = !string.IsNullOrEmpty(project.LiveUrl) ? project.LiveUrl : project.GitHubUrl;
-        
-        if (!string.IsNullOrEmpty(urlToOpen))
-        {
-            await JSRuntime.InvokeVoidAsync("open", urlToOpen, "_blank");
-        }
-    }
-
     private bool HasClickableLink(Project project)
     {
         return !string.IsNullOrEmpty(project.LiveUrl) || !string.IsNullOrEmpty(project.GitHubUrl);
     }
+
+    private Project? selectedProject;
+    private bool isModalVisible = false;
+
+    private async Task OpenProject(Project project)
+    {
+        if (project.Screenshots?.Any() == true)
+        {
+            selectedProject = project;
+            isModalVisible = true;
+        }
+        else
+        {
+            string urlToOpen = !string.IsNullOrEmpty(project.LiveUrl) ? project.LiveUrl : project.GitHubUrl;
+            if (!string.IsNullOrEmpty(urlToOpen))
+            {
+                await JSRuntime.InvokeVoidAsync("open", urlToOpen, "_blank");
+            }
+        }
+    }
+
+    private Task CloseModal()
+    {
+        selectedProject = null;
+        isModalVisible = false;
+        return Task.CompletedTask;
+    }
 }
+
+<ProjectModalComponent Project="selectedProject" IsVisible="isModalVisible" OnClose="CloseModal" />
