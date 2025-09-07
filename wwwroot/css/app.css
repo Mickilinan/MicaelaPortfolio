@@ -1610,6 +1610,15 @@ textarea.form-control {
   color: var(--primary);
 }
 
+.info-container.home-cards {
+  width: 100%;
+  margin-left: 0;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  display: flex;
+}
+
 .available {
   background: #1abc9c;
   color: #fff;

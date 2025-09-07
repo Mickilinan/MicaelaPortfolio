@@ -1,0 +1,22 @@
+﻿@code {
+    [Parameter] public string Title { get; set; } = "Highlights";
+    [Parameter] public RenderFragment? Icon { get; set; }
+    [Parameter] public IEnumerable<string> Items { get; set; } = Array.Empty<string>();
+}
+
+
+<div class="highlights">
+    <h3>
+        @if (Icon != null)
+        {
+            @Icon
+        }
+        @Title
+    </h3>
+    <ul>
+        @foreach (var item in Items)
+        {
+            <li>@item</li>
+        }
+    </ul>
+</div>
