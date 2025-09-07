@@ -1,5 +1,7 @@
 ﻿@page "/about"
-@inject IJSRuntime JSRuntime
+@inject IJSRuntime JS
+
+
 
 <PageTitle>About | Micaela Nilsson</PageTitle>
 
@@ -15,10 +17,7 @@
         </div>
 
         <div class="about-content" data-aos="fade-left">
-            @* <h2>Hi, I'm <span style="color: #FFCB9A;">Micaela Nilsson</span></h2>
-            <h3>Junior .NET Developer based in Ängelholm, Skåne</h3> *@
-
-            <div class="about-text">
+           <div class="about-text">
                 <p>
                     Ever since I jumped headfirst into the world of web development, I've been totally hooked on how
                     creative it is!</p>
@@ -54,32 +53,51 @@
                 </p>
             </div>
 
-            <div class="info-container" data-aos="fade-up">
-            <Highlights/>
-            <WhatsNext/>
+       <div class="info-container" data-aos="fade-up">
+    <Experience Title="My Experience" Items="@aboutExperienceItems">
+        <Icon>
+            <i class="fa-solid fa-star"></i>
+        </Icon>
+    </Experience>
+    
+    <WhatsNext Title="What's Next" Items="@aboutWhatsNextItems">
+        <Icon>
+            <i class="fa-solid fa-road"></i>
+        </Icon>
+    </WhatsNext>
+</div>
 
-          
-            </div>
 
-            <div class="about-buttons">
-                <a href="contact" class="btn-primary">
-                    Get In Touch
-                </a>
-                <a href="projects" class="btn-outline">
-                    View My Work
-                </a>
-            </div>
         </div>
     </div>
 </section>
-
 @code {
     [Inject]
     private NavigationManager NavigationManager { get; set; }
 
+
+    private readonly string[] aboutExperienceItems = new[]
+    {
+       ".NET Fullstack Developer Education (2023–2025) – EC Utbildning",
+    "Internship @ Akribian – Built admin portal with React, TypeScript & Node.js",
+    "Portfolio Project – Deployed Blazor WebAssembly app via GitHub + Netlify",
+    "Team Skills – Agile collaboration, GitHub workflows & code reviews",
+    "Problem Solver – Debugging, refactoring & performance optimization"
+    };
+
+    
+    private readonly string[] aboutWhatsNextItems = new[]
+    {
+           "AI & Python Development (Oct 2025)",
+    "Machine Learning – Scikit-learn, TensorFlow, Pandas, Matplotlib",
+     "Passion Project – National cat adoption platform (free for all organizations)",
+    "Freelance Projects – Currently working with real clients",
+   
+    };
+
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
-        await JSRuntime.InvokeVoidAsync("initAOS");
+        await JS.InvokeVoidAsync("initAOS");
     }
 }

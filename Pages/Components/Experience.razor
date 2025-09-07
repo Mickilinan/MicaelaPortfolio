@@ -1,4 +1,4 @@
-﻿<div class="whats-next" >
+﻿<div class="highlights">
     <h3>
         @if (Icon != null)
         {
@@ -6,7 +6,7 @@
         }
         @Title
     </h3>
-    <ul>
+   <ul>
         @foreach (var item in Items)
         {
             <li>@item</li>
@@ -15,7 +15,7 @@
 </div>
 
 @code {
-    [Parameter] public string Title { get; set; } = "What's Next";
+    [Parameter] public string Title { get; set; } = "Highlights";
     [Parameter] public RenderFragment? Icon { get; set; }
     [Parameter] public IEnumerable<string> Items { get; set; } = Array.Empty<string>();
 }

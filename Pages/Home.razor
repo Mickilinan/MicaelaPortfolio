@@ -2,7 +2,7 @@
 @inject ProjectService ProjectService
 @inject NavigationManager NavigationManager
 
-<PageTitle>Micaela Nilsson | .NET Developer</PageTitle>
+<PageTitle>Micaela Nilsson | Fullstack Developer</PageTitle>
 
 <section class="hero-section">
     <div class="hero-content">
@@ -28,36 +28,8 @@
         </div>
     </div>
 </section>
-<section class="info-container home-cards">
-    <Highlights Title="Highlights" Items="@highlightsItems">
-        <Icon>
-            <i class="fa-solid fa-star"></i>
-        </Icon>
-    </Highlights>
 
-    <WhatsNext Title="What's Next" Items="@whatsNextItems">
-        <Icon>
-            <i class="fa-solid fa-road"></i>
-        </Icon>
-    </WhatsNext>
-</section>
-
-@code {
-    private readonly string[] highlightsItems = new[]
-    {
-        ".NET Web Dev, EC (2023–2025)",
-        "Internship: Akribian – Admin-portal",
-        "Portfolio: Blazor app (prod deploy)",
-        "Passion project: Cat-app"
-    };
-
-    private readonly string[] whatsNextItems = new[]
-    {
-        "AI & Python (hösten 2025)",
-        "Azure Fundamentals",
-        "CI/CD: GitHub Actions + Docker"
-    };
-}
+<FeaturedProjects />
 
 <section class="skills-highlight">
     <h2 class="section-title" data-aos="fade-up">Tech Stack</h2>
@@ -101,3 +73,6 @@
         </a>
     </div>
 </section>
+
+@code {
+}

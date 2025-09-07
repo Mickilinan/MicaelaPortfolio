@@ -1,6 +1,4 @@
-﻿// Hero section styles
-
-.hero-section {
+﻿.hero-section {
     padding: 4rem 0;
 }
 
@@ -68,9 +66,9 @@
         width: 360px;
         height: 360px;
         transform: translate(-50%, -50%);
-        background: #d9efd7; // ljusgrön/jordton
+        background: #d9efd7; 
         border-radius: 50% 45% 55% 50% / 50% 55% 45% 50%;
-        /* alternativt en SVG-path via background-image */
+       
         z-index: 1;
         filter: blur(40px);
         opacity: 0.6;
@@ -120,7 +118,7 @@
     animation: badge-glow-pulse 2s infinite alternate;
 }
 
-// Featured Projects Section
+
 .featured-projects {
     padding: 4rem 0;
 }
@@ -138,7 +136,7 @@
     margin-bottom: 2rem;
 }
 
-// Skills Highlight Section
+
 .skills-highlight {
     padding: 10rem 0;
 
@@ -192,12 +190,11 @@
     margin-top: 2rem;
 }
 
-// Timeline Section
+
 .timeline-section {
     margin-bottom: 4rem;
 }
 
-// CTA Section
 .cta-section {
     text-align: center;
     padding: 4rem 0;
@@ -231,14 +228,75 @@
     }
 }
 
-.info-container.home-cards {
-    width: 100%;
-    margin-left: 0;
-    justify-content: center;
-    align-items: stretch;
-    gap: 2rem;
-    display: flex;
+
+// Keyframes animations
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        visibility: hidden;
+    }
+    1% {
+        visibility: visible;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
 }
+
+@keyframes slideOutDown {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+    99% {
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+        visibility: hidden;
+    }
+}
+
+@keyframes iconPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+
+@media (max-width: 768px) {
+}
+
+/
+.highlights {
+    animation-delay: 0.2s;
+}
+
+
+.whats-next {
+    animation-delay: 0.4s;
+}
+
+
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .available {
     background: #1abc9c;
@@ -249,4 +307,46 @@
     margin-left: 0.5em;
     font-weight: bold;
     letter-spacing: 0.5px;
+}
+
+.read-more-section {
+    padding: 3rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.05) 0%, rgba(var(--accent-rgb), 0.03) 100%);
+    border-radius: var(--border-radius);
+    margin: 2rem 0;
+
+    .read-more-content {
+        max-width: 600px;
+        margin: 0 auto;
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: var(--muted-foreground);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            transition: all var(--transition-speed);
+
+            i {
+                transition: transform var(--transition-speed);
+            }
+
+            &:hover i {
+                transform: translateX(3px);
+            }
+        }
+    }
 }

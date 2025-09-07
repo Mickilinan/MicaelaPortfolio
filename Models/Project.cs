@@ -13,5 +13,6 @@ public class Project
     public List<string>? Screenshots { get; set; }
     public string? Badge { get; set; }
     public string? Category { get; set; }
+    public bool IsFeatured { get; set; } = false;
 
 }

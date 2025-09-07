@@ -86,13 +86,13 @@
             margin-bottom: 0;
         }
     }
-    // Add emphasis to first paragraph
+    
     p:first-of-type {
         font-size: 1.1em;
         color: var(--accent);
         font-weight: 500;
     }
-    // Style links within text
+  
     a {
         color: var(--primary);
         text-decoration: none;
@@ -139,7 +139,7 @@
     }
 }
 
-// Timeline Section
+
 .timeline-section {
     margin-bottom: 4rem;
 
