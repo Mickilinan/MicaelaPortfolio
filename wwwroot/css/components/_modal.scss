@@ -13,11 +13,13 @@
 .modal-content {
     @include card;
     padding: 0;
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: 75vw;
+    max-height: 75vh;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    //@include flex(column);
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .modal-header {

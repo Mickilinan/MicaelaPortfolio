@@ -1,0 +1,35 @@
+@inject IJSRuntime JSRuntime
+
+@ChildContent
+
+<ProjectModal Project="selectedProject" IsVisible="isModalVisible" OnClose="CloseModal" />
+
+@code {
+    [Parameter] public RenderFragment ChildContent { get; set; } = null!;
+
+    protected Project? selectedProject;
+    protected bool isModalVisible = false;
+
+    protected async Task OpenProject(Project project)
+    {
+        if (project.Screenshots?.Any() == true)
+        {
+            selectedProject = project;
+            isModalVisible = true;
+        }
+        else
+        {
+            string urlToOpen = !string.IsNullOrEmpty(project.LiveUrl) ? project.LiveUrl : project.GitHubUrl;
+            if (!string.IsNullOrEmpty(urlToOpen))
+            {
+                await JSRuntime.InvokeVoidAsync("open", urlToOpen, "_blank");
+            }
+        }
+    }
+
+    protected void CloseModal()
+    {
+        selectedProject = null;
+        isModalVisible = false;
+    }
+}

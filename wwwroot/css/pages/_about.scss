@@ -258,19 +258,20 @@
 
 .highlights, .whats-next {
     flex: 1;
-    background-color: var(--background);
-    border: 1px solid var(--border);
+    background: linear-gradient(145deg, rgba(44, 53, 49, 0.4) 0%, rgba(44, 53, 49, 0.2) 100%);
+    border: 1px solid rgba(255, 203, 154, 0.1);
     border-radius: var(--border-radius);
     padding: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
 
     h3 {
-        color: var(--primary);
+        color: #FFCB9A;
         margin-bottom: 1rem;
         font-size: 1.3rem;
 
         i {
-            color: var(--accent);
+            color: #FFCB9A;
             margin-right: 0.5rem;
         }
     }

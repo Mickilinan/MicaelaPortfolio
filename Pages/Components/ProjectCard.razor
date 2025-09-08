@@ -1,0 +1,94 @@
+<!-- Pages/Components/ProjectCard.razor -->
+@inject IJSRuntime JSRuntime
+
+<div class="project-card @(Project.Screenshots?.Any() == true ? "has-screenshots" : "")"
+     data-aos="fade-up" data-aos-delay="@(AosDelay)"
+     @onclick="() => OpenProject(Project)"
+     style="@(HasClickableLink(Project) || Project.Screenshots?.Any() == true ? "cursor: pointer;" : "")">
+    
+    <div class="project-header">
+        @if (Project.Screenshots?.Any() == true)
+        {
+            <span class="screenshot-badge project-screenshot-badge">
+                <i class="fas fa-images"></i>
+                <span class="screenshot-text">View screenshots</span>
+            </span>
+        }
+        @* else
+        {
+            <div class="project-icon">
+                <i class="@Project.IconClass"></i>
+            </div>
+        }
+         *@
+        <div class="project-badges">
+            @if (!string.IsNullOrEmpty(Project.Badge))
+            {
+                <span class="project-badge">@Project.Badge</span>
+            }
+        </div>
+    </div>
+    
+    <div class="project-content">
+        <h3>@Project.Title</h3>
+        <p class="project-description">@Project.Description</p>
+        <div class="project-tech">
+            @foreach (var tech in Project.Technologies.Take(MaxTechnologies))
+            {
+                <span class="tech-tag">@tech</span>
+            }
+        </div>
+        <div class="project-links">
+            <div class="external-links">
+                @if (!string.IsNullOrEmpty(Project.LiveUrl))
+                {
+                    <a href="@Project.LiveUrl" target="_blank" class="project-link" title="Live Demo" @onclick:stopPropagation="true">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                }
+                @if (!string.IsNullOrEmpty(Project.GitHubUrl))
+                {
+                    <a href="@Project.GitHubUrl" target="_blank" class="project-link" title="View Code" @onclick:stopPropagation="true">
+                        <i class="fab fa-github"></i>
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public Project Project { get; set; } = null!;
+    [Parameter] public int AosDelay { get; set; } = 100;
+    [Parameter] public int MaxTechnologies { get; set; } = 10;
+    [Parameter] public EventCallback<Project> OnProjectClick { get; set; }
+
+    private bool HasClickableLink(Project project)
+    {
+        return !string.IsNullOrEmpty(project.LiveUrl) || !string.IsNullOrEmpty(project.GitHubUrl);
+    }
+
+    private async Task OpenProject(Project project)
+    {
+        if (OnProjectClick.HasDelegate)
+        {
+            await OnProjectClick.InvokeAsync(project);
+        }
+        else
+        {
+            
+            if (project.Screenshots?.Any() == true)
+            {
+                
+            }
+            else
+            {
+                string urlToOpen = !string.IsNullOrEmpty(project.LiveUrl) ? project.LiveUrl : project.GitHubUrl;
+                if (!string.IsNullOrEmpty(urlToOpen))
+                {
+                    await JSRuntime.InvokeVoidAsync("open", urlToOpen, "_blank");
+                }
+            }
+        }
+    }
+}

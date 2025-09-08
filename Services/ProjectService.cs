@@ -27,7 +27,7 @@ public class ProjectService
                 },
                 new Project
 {
-    Id = 7,
+    Id = 2,
     Title = "National Cat Adoption Platform",
     Description = "Free, nationwide adoption portal for cat shelters. Features include organization login, cat management, interest registration, and user-friendly search.",
     Technologies = new List<string> { "Next.js", "Supabase", "TailwindCSS",  "TypeScript" },
@@ -44,7 +44,7 @@ public class ProjectService
 },
                 new Project
 {
-    Id = 8,
+    Id = 3,
     Title = "Catsona Quiz",
     Description = "A fun personality quiz that helps users discover their \"cat persona.\" Currently building the backend with plans to expand into a fullstack application.",
     Technologies = new List<string> { "React", "TailwindCSS", "C#", "TypeScript", "EF", "PostgreSQL" },
@@ -57,7 +57,7 @@ public class ProjectService
 
                 new Project
                 {
-                    Id = 2,
+                    Id = 4,
                     Title = "Admin Portal for Count On Me",
                     Description = "Administrative portal for the educational game Count On Me.",
                     IconClass = "fas fa-toolbox",
@@ -67,7 +67,7 @@ public class ProjectService
                 },
                 new Project
                 {
-                    Id = 3,
+                    Id = 5,
                     Title = "CMS Umbraco Project",
                     Description = "School project focusing on content management systems using Umbraco.",
                     IconClass = "fas fa-file-alt",
@@ -77,7 +77,7 @@ public class ProjectService
                 },
                 new Project
                 {
-                    Id = 4,
+                    Id = 6,
                     Title = "Silicon Backend",
                     Description = "School project using advanced backend technologies.",
                     IconClass = "fas fa-server",
@@ -87,7 +87,7 @@ public class ProjectService
                 },
                 new Project
                 {
-                    Id = 5,
+                    Id = 7,
                     Title = "Shared Silicon",
                     Description = "School project, full-stack development using ASP .NET Core MVC.",
                     IconClass = "fas fa-layer-group",
@@ -96,7 +96,7 @@ public class ProjectService
                 },
                 new Project
                 {
-                    Id = 6,
+                    Id = 8,
                     Title = "Database Project",
                     Description = "School project, database design and implementation.",
                     IconClass = "fas fa-database",

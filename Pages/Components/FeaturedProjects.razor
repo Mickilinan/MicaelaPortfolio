@@ -1,71 +1,26 @@
 @inject ProjectService ProjectService
 @inject IJSRuntime JSRuntime
 
-<section class="featured-projects" data-aos="fade-up">
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="projects-grid">
-        @foreach (var project in ProjectService.GetFeaturedProjects().Take(3))
-        {
-            <div class="project-card @(project.Screenshots?.Any() == true ? "has-screenshots" : "")" 
-                 data-aos="fade-up" data-aos-delay="100"
-                 @onclick="() => OpenProject(project)"
-                 style="@(HasClickableLink(project) || project.Screenshots?.Any() == true ? "cursor: pointer;" : "")">
-                <div class="project-header">
-                    @if (project.Screenshots?.Any() == true)
-                    {
-                        <span class="screenshot-badge project-screenshot-badge">
-                            <i class="fas fa-images"></i>
-                            <span class="screenshot-text">View screenshots</span>
-                        </span>
-                    }
-                    else
-                    {
-                        <div class="project-icon">
-                            <i class="@project.IconClass"></i>
-                        </div>
-                    }
-                    <div class="project-badges">
-                        @if (!string.IsNullOrEmpty(project.Badge))
-                        {
-                            <span class="project-badge">@project.Badge</span>
-                        }
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>@project.Title</h3>
-                    <p class="project-description">@project.Description</p>
-                    <div class="project-tech">
-                        @foreach (var tech in project.Technologies.Take(3))
-                        {
-                            <span class="tech-tag">@tech</span>
-                        }
-                    </div>
-                    <div class="project-links">
-                        <div class="external-links">
-                            @if (!string.IsNullOrEmpty(project.GitHubUrl))
-                            {
-                                <a href="@project.GitHubUrl" target="_blank" class="project-link" title="View on GitHub">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            }
-                        </div>
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
-</section>
+<ProjectGridBase>
+    <section class="featured-projects" data-aos="fade-up">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            @foreach (var project in ProjectService.GetFeaturedProjects().Take(3))
+            {
+                <ProjectCard Project="project" 
+                            AosDelay="100" 
+                            MaxTechnologies="10"
+                            OnProjectClick="OpenProject" />
+            }
+        </div>
+    </section>
+</ProjectGridBase>
 
 <ProjectModal Project="selectedProject" IsVisible="isModalVisible" OnClose="CloseModal" />
 
 @code {
     private Project? selectedProject;
     private bool isModalVisible = false;
-
-    private bool HasClickableLink(Project project)
-    {
-        return !string.IsNullOrEmpty(project.LiveUrl) || !string.IsNullOrEmpty(project.GitHubUrl);
-    }
 
     private async Task OpenProject(Project project)
     {
@@ -84,10 +39,9 @@
         }
     }
 
-    private Task CloseModal()
+    private void CloseModal()
     {
         selectedProject = null;
         isModalVisible = false;
-        return Task.CompletedTask;
     }
 }

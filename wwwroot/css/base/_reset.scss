@@ -12,10 +12,15 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: radial-gradient(ellipse at 60% 40%, #116466 0%, #2C3531 100%) !important;
-    color: var(--foreground);
+    background: 
+    linear-gradient(rgba(44, 53, 49, 0.7), rgba(17, 100, 102, 0.5)),
+    url('/images/background/watercolorbg.jpg') center center / cover no-repeat,
+    radial-gradient(ellipse at 60% 40%, #116466 0%, #2C3531 100%) !important;
+
+    // background: radial-gradient(ellipse at 60% 40%, #116466 0%, #2C3531 100%) !important;
+    // color: var(--foreground);
     line-height: 1.6;
-    transition: background-color var(--transition-speed), color var(--transition-speed);
+    // transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
 a {

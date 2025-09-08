@@ -1,81 +1,35 @@
 ﻿@page "/projects"
-@using MicaelaPortfolio.Models
-@using MicaelaPortfolio.Services
 @inject ProjectService projectService
-@inject IJSRuntime JSRuntime
 @inject NavigationManager NavigationManager
+@inject IJSRuntime JSRuntime
 
 <PageTitle>Projects | Micaela Nilsson</PageTitle>
 
-<div class="page-header">
-    <h1>Projects</h1>
-    <p>A showcase of my work</p>
-</div>
-
-<section class="projects-section">
-    <div class="projects-grid">
-        @foreach (var project in filteredProjects)
-        {
-            <div class="project-card @(project.Screenshots?.Any() == true ? "has-screenshots" : "")"
-                 data-aos="fade-up" data-aos-delay="@(project.Id * 100)"
-                 @onclick="() => OpenProject(project)"
-                 style="@(HasClickableLink(project) || project.Screenshots?.Any() == true ? "cursor: pointer;" : "")">
-                <div class="project-header">
-                    @if (project.Screenshots?.Any() == true)
-                    {
-                        <span class="screenshot-badge project-screenshot-badge">
-                            <i class="fas fa-images"></i>
-                            <span class="screenshot-text">View screenshots</span>
-                        </span>
-                    }
-                    else
-                    {
-                        <div class="project-icon">
-                            <i class="@project.IconClass"></i>
-                        </div>
-                    }
-                    <div class="project-badges">
-                        @if (!string.IsNullOrEmpty(project.Badge))
-                        {
-                            <span class="project-badge">@project.Badge</span>
-                        }
-                      
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>@project.Title</h3>
-                    <p class="project-description">@project.Description</p>
-                    <div class="project-tech">
-                        @foreach (var tech in project.Technologies)
-                        {
-                            <span class="tech-tag">@tech</span>
-                        }
-                    </div>
-                    <div class="project-links">
-                        <div class="external-links">
-                            @if (!string.IsNullOrEmpty(project.LiveUrl))
-                            {
-                                <a href="@project.LiveUrl" target="_blank" class="project-link" title="Live Demo" @onclick:stopPropagation="true">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            }
-                            @if (!string.IsNullOrEmpty(project.GitHubUrl))
-                            {
-                                <a href="@project.GitHubUrl" target="_blank" class="project-link" title="View Code" @onclick:stopPropagation="true">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            }
-                        </div>
-      
-                    </div>
-                </div>
-            </div>
-        }
+<ProjectGridBase>
+    <div class="page-header">
+        <h1>Projects</h1>
+        <p>A showcase of my work</p>
     </div>
-</section>
+
+    <section class="projects-section">
+        <div class="projects-grid">
+            @foreach (var project in filteredProjects)
+            {
+                <ProjectCard Project="project" 
+                            AosDelay="@(project.Id * 100)" 
+                            MaxTechnologies="10"
+                            OnProjectClick="OpenProject" />
+            }
+        </div>
+    </section>
+</ProjectGridBase>
+
+<ProjectModal Project="selectedProject" IsVisible="isModalVisible" OnClose="CloseModal" />
 
 @code {
     private List<Project> filteredProjects = new List<Project>();
+    private Project? selectedProject;
+    private bool isModalVisible = false;
 
     protected override void OnInitialized()
     {
@@ -89,14 +43,6 @@
             await JSRuntime.InvokeVoidAsync("initAOS");
         }
     }
-
-    private bool HasClickableLink(Project project)
-    {
-        return !string.IsNullOrEmpty(project.LiveUrl) || !string.IsNullOrEmpty(project.GitHubUrl);
-    }
-
-    private Project? selectedProject;
-    private bool isModalVisible = false;
 
     private async Task OpenProject(Project project)
     {
@@ -115,12 +61,9 @@
         }
     }
 
-    private Task CloseModal()
+    private void CloseModal()
     {
         selectedProject = null;
         isModalVisible = false;
-        return Task.CompletedTask;
     }
 }
-
-<ProjectModal Project="selectedProject" IsVisible="isModalVisible" OnClose="CloseModal" />

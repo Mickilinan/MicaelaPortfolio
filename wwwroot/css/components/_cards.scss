@@ -1,11 +1,39 @@
 ﻿.project-card {
     @include card;
     overflow: hidden;
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    position: relative;
+    background: linear-gradient(145deg, rgba(44, 53, 49, 0.4) 0%, rgba(44, 53, 49, 0.2) 100%);
+    border: 1px solid rgba(255, 203, 154, 0.1); 
+    backdrop-filter: blur(15px);
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.2), 
+        0 2px 8px rgba(17, 100, 102, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
     &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(-8px) scale(1.02); 
+        box-shadow: 
+            0 15px 35px rgba(0, 0, 0, 0.3),
+            0 6px 15px rgba(17, 100, 102, 0.2),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 203, 154, 0.2);
+    }
+
+  
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(255, 203, 154, 0.05) 0%, transparent 50%);
+        pointer-events: none;
+        z-index: 1;
     }
 
     &.has-screenshots {
@@ -29,29 +57,52 @@
     .screenshot-badge {
         background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
         color: var(--card);
-        padding: 0.25rem 0.5rem;
-        border-radius: 0.75rem;
-        font-size: 0.75rem;
-        font-weight: 500;
-        @include flex(row, center, center, 0.25rem);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        padding: 0.3rem 0.6rem;
+        border-radius: 1rem;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        @include flex(row, center, center, 0.3rem);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
 
-      
+        &:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            filter: brightness(1.1);
+        }
     }
 
     .project-screenshot-badge {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+        color: var(--card);
+        padding: 0.3rem 0.6rem; 
+        border-radius: 1rem; 
+        font-size: 0.7rem; 
+        font-weight: 600; 
+        text-transform: uppercase; 
+        letter-spacing: 0.3px; 
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        border: none;
         display: flex;
         align-items: center;
         justify-content: center;
-        min-width: 120px;
-        height: 48px;
-        font-size: 1rem;
+        gap: 0.3rem;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         cursor: pointer;
-        gap: 0.5rem;
+
+        &:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            filter: brightness(1.1);
+        }
 
         .screenshot-text {
             font-weight: 600;
-            margin-left: 0.5rem;
         }
     }
 
@@ -75,16 +126,31 @@
     }
 
     .project-badge {
-        background-color: var(--primary);
-        color: black;
-        padding: 0.25rem 0.75rem;
+        background: rgba(255, 255, 255, 0.05);
+        color: rgba(255, 255, 255, 0.4);
+        padding: 0.3rem 0.6rem;
         border-radius: 1rem;
-        font-size: 0.75rem;
-        font-weight: 600;
+        font-size: 0.7rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.1px;
+        box-shadow: none;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(2px);
+        opacity: 0.7;
+        
+        &::before {
+            margin-right: 0.3rem;
+            font-size: 0.6rem;
+            opacity: 0.5;
+        }
     }
 
     .project-content {
         padding: 0 1.5rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
 
         h3 {
             font-size: 1.25rem;
@@ -95,11 +161,6 @@
     .project-description {
         color: var(--muted-foreground);
         margin-bottom: 1rem;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
     }
 
     .project-tech {
@@ -110,7 +171,8 @@
     }
 
     .project-links {
-        @include flex(row, space-between, center);
+        @include flex(row, flex-end, center);
+        margin-top: auto;
     }
 
     .external-links {
@@ -136,6 +198,13 @@
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
     font-size: 0.75rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .skill-card {
