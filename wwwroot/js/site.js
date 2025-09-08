@@ -25,6 +25,38 @@ function initAOS() {
     });
 }
 
+// Close mobile menu when clicking outside
+function setupMobileMenu() {
+    const mobileMenu = document.querySelector('.nav-links');
+    const menuToggle = document.querySelector('.menu-toggle');
+    
+    if (mobileMenu && menuToggle) {
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnToggle = menuToggle.contains(event.target);
+            
+            if (!isClickInsideMenu && !isClickOnToggle && mobileMenu.classList.contains('open')) {
+                mobileMenu.classList.remove('open');
+            }
+        });
+        
+        // Close menu when clicking on a link
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+        });
+    }
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', setupMobileMenu);
+
+// Also initialize after Blazor loads
+window.addEventListener('load', setupMobileMenu);
+
 // Theme toggle functionality
 //document.addEventListener('DOMContentLoaded', () => {
 //    // Check for saved theme preference
