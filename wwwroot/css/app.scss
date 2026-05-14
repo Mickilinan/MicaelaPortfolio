@@ -16,6 +16,7 @@
 @import "pages/home";
 @import "pages/projects";
 @import "pages/skills";
+@import "pages/websites-for-businesses";
 
 :root {
     @each $name, $color in $colors {

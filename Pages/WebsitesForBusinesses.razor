@@ -1,0 +1,106 @@
+@page "/websites-for-businesses"
+@inject IJSRuntime JSRuntime
+
+<PageTitle>Websites for businesses | Micaela Nilsson</PageTitle>
+
+<div class="business-page">
+    <header class="page-header" data-aos="fade-up">
+        <h1>Modern websites for <span style="color: #FFCB9A;">small businesses</span></h1>
+        <p>
+            I help small businesses, freelancers and associations create fast,
+            mobile-friendly websites that make it easier for people to find,
+            trust and contact them.
+        </p>
+    </header>
+
+    <div class="business-hero-cta" data-aos="fade-up">
+        <a href="contact" class="btn-primary">Get in touch</a>
+    </div>
+
+    <section class="business-section" aria-labelledby="business-help-heading" data-aos="fade-up">
+        <h2 id="business-help-heading" class="section-title">How I can help</h2>
+
+        <div class="info-grid">
+            <Experience Title="What I can help with" Items="@helpItems">
+                <Icon>
+                    <i class="fa-solid fa-pen-ruler"></i>
+                </Icon>
+            </Experience>
+
+            <WhatsNext Title="Who this is for" Items="@audienceItems">
+                <Icon>
+                    <i class="fa-solid fa-users"></i>
+                </Icon>
+            </WhatsNext>
+        </div>
+    </section>
+
+    <section class="business-section" aria-labelledby="business-process-heading" data-aos="fade-up">
+        <h2 id="business-process-heading" class="section-title">How the process works</h2>
+
+        <ol class="process-list">
+            @foreach (var step in processSteps)
+            {
+                <li>@step</li>
+            }
+        </ol>
+    </section>
+
+    <section class="business-section" aria-labelledby="business-why-heading" data-aos="fade-up">
+        <h2 id="business-why-heading" class="section-title">Why work with me</h2>
+
+        <div class="why-card">
+            <p>
+                  I build small, professional websites with a focus on clean code,
+        usability, responsive design and clear communication. My goal is to
+        create websites that are easy to use for your visitors and easy to keep
+        up to date over time.
+            </p>
+            <p>
+                I keep things simple, clear and honest. If you need changes after launch,
+    we can agree on a simple setup for updates that fits your business and budget.
+            </p>
+        </div>
+    </section>
+
+    <section class="business-cta" data-aos="fade-up">
+        <a href="contact" class="btn-primary">Get in touch</a>
+    </section>
+</div>
+
+@code {
+    private readonly string[] helpItems = new[]
+    {
+        "Responsive website design",
+        "Clear structure and navigation",
+        "Contact forms",
+        "Google Maps / location info",
+        "Basic SEO setup",
+        "Deployment and domain guidance"
+    };
+
+    private readonly string[] audienceItems = new[]
+    {
+        "Small businesses with an outdated website",
+        "New businesses that need a first website",
+        "Associations or local organizations",
+        "Businesses currently relying only on Facebook or Instagram"
+    };
+
+    private readonly string[] processSteps = new[]
+    {
+        "Short intro call or message",
+        "We define the pages and content needed",
+        "I create a simple structure and design direction",
+        "I build the website",
+        "We review, adjust and publish"
+    };
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("initAOS");
+        }
+    }
+}

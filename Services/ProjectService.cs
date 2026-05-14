@@ -33,9 +33,9 @@ public class ProjectService
     Technologies = new List<string> { "Next.js", "Supabase", "TailwindCSS",  "TypeScript" },
     Screenshots = new List<string>
     {
-        "/images/catPortalLogin.png",
-        "/images/catPortalDashboard.png",
-        "/images/catPortalFront.png",
+        "/images/cat1.png",
+        "/images/cat2.png"
+        ,
     },
     Badge = "In Development",
     IconClass = "fas fa-cat",
