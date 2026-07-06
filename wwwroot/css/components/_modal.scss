@@ -171,7 +171,12 @@
         }
 
         .main-image-container {
-            height: 38vh;
+            height: 50vh;
+        }
+
+        .main-screenshot {
+            object-fit: contain;
+            object-position: center;
         }
 
         .project-links {
