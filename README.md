@@ -1,38 +1,36 @@
-MicaelaPortfolio is a single-page portfolio application built with modern .NET technologies, showcasing my projects, skills and a contact form in a responsive, client-side experience.
+MicaelaPortfolio is my portfolio site: projects, skills, about, and contact. **Live site:** [micaelanilsson.se](https://micaelanilsson.se) (Netlify). Recruiters and visitors use the hosted URL — no need to clone or run anything locally.
+
+Built as a **Blazor WebAssembly** app: the UI runs **client-side** in the browser (C# compiled to WebAssembly), with **client-side routing** between sections (`/`, `/about`, `/projects`, and so on). That pattern is often called a **single-page application (SPA)**: one `index.html` shell, then navigation without full page reloads — not “literally one long scrolling page.”
 
 
-**Technology Overview**
+## Technology overview
 
-Framework: Blazor WebAssembly (ASP.NET Core, .NET 8)
+**Framework:** Blazor WebAssembly (ASP.NET Core, .NET 8)
 
-Language & Markup: C# with Razor components, HTML5
+**Language & markup:** C# with Razor components, HTML5
 
-Styling: SCSS compiled to CSS via dotnet-compiler-config (compilerconfig.json)
+**Styling:** SCSS (`wwwroot/css/app.scss` → `wwwroot/css/app.css`). `compilerconfig.json` is for the Web Compiler / Sass toolchain when I edit styles; the published site serves the compiled `app.css`.
 
-Dependency Injection & HTTP: Built-in ASP.NET Core DI with HttpClient for data fetching
+**Architecture:** ASP.NET Core **dependency injection** in `Program.cs` — scoped services (`ProjectService`, `SkillService`) injected into Razor components. Project and skill data live in those services (in-memory lists), not a separate backend API.
 
-Data Models: Plain C# classes (Project, Skill, ContactRequest)
+**Data models:** `Project`, `Skill` in `Models/`; contact form model (`ContactForm`) in `Pages/Contact.razor`
 
-Build & Tooling: .NET CLI (dotnet restore, dotnet run, dotnet publish) and Visual Studio Code
+**Contact:** Blazor `EditForm` with validation; submissions via **Netlify Forms** (JS helper + hidden form in `index.html`)
 
-Version Control: Git & GitHub
+**Hosting:** Netlify (`netlify.toml`, `dotnet publish`, SPA fallback to `index.html`)
 
-Hosting: Netlify (configured with netlify.toml)
+**UI details:** Responsive SCSS (flexbox, breakpoints), Font Awesome & Devicon, AOS scroll animations, meta/Open Graph in `index.html`, per-route `<PageTitle>`
 
-Fonts & Icons: Google Font “Inter” and custom favicon/app icons
 
-**Core Features & Technologies**
+## Core features
 
-Client-Side SPA: Fast, interactive UI built entirely in the browser.
+- **Client-side SPA:** Fast navigation after first load; all interaction in the browser.
+- **Razor components:** Reusable UI (`ProjectCard`, `ProjectModal`, `FeaturedProjects`, layout/navigation).
+- **Dependency injection:** Standard Blazor WASM service registration and constructor/`@inject` usage.
+- **Responsive design:** Mobile-first layout in SCSS.
+- **Accessibility & SEO:** Semantic HTML, descriptive titles, sharing metadata.
 
-Razor Components: Reusable UI units with C# logic.
 
-Dependency Injection: Standard ASP.NET Core DI for easy testing and extensibility.
+## For me (maintaining the repo)
 
-HTTP & JSON: HttpClient calls to static JSON or APIs, mapped to C# models.
-
-Responsive Design: Mobile-first layout using SCSS and Flexbox.
-
-Automated Deployment: Continuous deployment on Netlify with branch triggers.
-
-Accessibility & SEO: Semantic HTML, proper meta tags via Next.js-like metadata configuration.
+When I change SCSS, I recompile to `app.css` (Web Compiler or `npx sass wwwroot/css/app.scss wwwroot/css/app.css`) before deploy. `dotnet run` is only for my own preview; `dotnet publish` is what Netlify uses on push.

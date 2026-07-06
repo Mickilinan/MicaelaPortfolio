@@ -11,6 +11,24 @@ public class ProjectService
         _projects = new List<Project>
             {
                 new Project
+{
+    Id = 2,
+    Title = "Kattmatch",
+    Description = "Kattmatch is a free, multi-tenant cat adoption platform connecting Swedish rescue organizations with adopters and foster homes. Currently onboarding pilot organizations.",
+    Technologies = new List<string> { "Next.js", "Supabase", "TailwindCSS",  "TypeScript", "Resend", "Vercel" },
+    Screenshots = new List<string>
+    {
+        "/images/startpage.png",
+        "/images/dashboardorg.png",
+        "/images/catlist.png",
+        "/images/cta.png"
+    },
+    Badge = "Pre-launch",
+    IconClass = "fas fa-cat",
+    IsFeatured = true
+
+},
+                new Project
                 {
                     Id = 1,
                     Title = "Model Monitor",
@@ -25,23 +43,6 @@ public class ProjectService
                     },
                     IsFeatured = true
                 },
-                new Project
-{
-    Id = 2,
-    Title = "National Cat Adoption Platform",
-    Description = "Free, nationwide adoption portal for cat shelters. Features include organization login, cat management, interest registration, and user-friendly search.",
-    Technologies = new List<string> { "Next.js", "Supabase", "TailwindCSS",  "TypeScript" },
-    Screenshots = new List<string>
-    {
-        "/images/cat1.png",
-        "/images/cat2.png"
-        ,
-    },
-    Badge = "In Development",
-    IconClass = "fas fa-cat",
-    IsFeatured = true
-
-},
                 new Project
 {
     Id = 3,

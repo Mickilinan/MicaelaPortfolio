@@ -15,7 +15,7 @@
             <div class="modal-body">
                
                 <div class="main-image-container">
-                    <img src="@selectedImage" alt="Screenshot of @Project.Title" class="main-screenshot" />
+                    <img src="@selectedImage" alt="Screenshot of @Project.Title" class="main-screenshot @(imageVisible ? "is-visible" : "")" loading="eager" decoding="sync" />
                 </div>
 
              
@@ -61,6 +61,7 @@
     [Parameter] public EventCallback OnClose { get; set; }
 
     private string selectedImage = "";
+    private bool imageVisible = true;
 
     protected override void OnParametersSet()
     {
@@ -70,9 +71,13 @@
         }
     }
 
-    private void SelectImage(string imageUrl)
+    private async Task SelectImage(string imageUrl)
     {
+        imageVisible = false;
+        StateHasChanged();
+        await Task.Delay(150);
         selectedImage = imageUrl;
+        imageVisible = true;
     }
 
     private async Task CloseModal()
