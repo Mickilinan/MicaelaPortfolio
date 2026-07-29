@@ -14,7 +14,7 @@ public class ProjectService
 {
     Id = 2,
     Title = "Kattmatch",
-    Description = "A multi-tenant cat adoption platform in production, used by Swedish rescue organizations. Built and operated solo: database design, a Postgres row-level security model, transactional email, CI/CD and error monitoring.",
+    Description = "A multi-tenant cat adoption platform in production, used by Swedish catrescue organizations. Built and operated solo: database design, a Postgres row-level security model, transactional email, CI/CD and error monitoring.",
     Technologies = new List<string> { "Next.js", "Supabase", "TailwindCSS",  "TypeScript", "Resend", "Vercel" },
     Screenshots = new List<string>
     {

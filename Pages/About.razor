@@ -38,7 +38,7 @@
 
                 <p>
                     For the past year I've been building Kattmatch alongside full-time work.
-                    It's a cat adoption platform now in production and used by Swedish rescue
+                    It's a cat adoption platform now in production and used by Swedish catrescue
                     organizations, and I've handled every part of it myself, from database
                     design and the security model to deployment and monitoring. It has taught
                     me as much about running software as about writing it.
@@ -83,24 +83,21 @@
     private NavigationManager NavigationManager { get; set; }
 
 
-    private readonly string[] aboutExperienceItems = new[]
-    {
-       ".NET Fullstack Developer Education (2023–2025) – EC Utbildning",
-    "Internship @ Akribian – Built admin portal with React, TypeScript & Node.js",
-    "Portfolio Project – Deployed Blazor WebAssembly app via GitHub + Netlify",
-    "Team Skills – Agile collaboration, GitHub workflows & code reviews",
-    "Problem Solver – Debugging, refactoring & performance optimization"
-    };
+private readonly string[] aboutExperienceItems = new[]
+{
+    "Kattmatch – Cat adoption platform in production, built and operated solo (2025–present)",
+    "AI & Python Development (2026) – EC Utbildning",
+    ".NET Fullstack Developer Education (2023–2025) – EC Utbildning",
+    "Internship @ Edument / Akribian – Admin portal with React, TypeScript & Node.js",
+    "Swedish Customs – Case officer since 2015; wrote the requirements spec for a new warehouse system"
+};
 
-    
-    private readonly string[] aboutWhatsNextItems = new[]
-    {
-           "AI & Python Development (Oct 2025)",
-    "Machine Learning – Scikit-learn, TensorFlow, Pandas, Matplotlib",
-     "Passion Project – National cat adoption platform (free for all organizations)",
-    "Freelance Projects – Currently working with real clients",
-   
-    };
+private readonly string[] aboutWhatsNextItems = new[]
+{
+    "Looking for my first developer role, ideally .NET or full-stack",
+    "Kattmatch – expanding beyond the pilot to more organizations",
+    "Deepening my .NET and backend skills in a team, with people to learn from"
+};
 
     protected override async Task OnInitializedAsync()
     {
