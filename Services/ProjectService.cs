@@ -14,7 +14,7 @@ public class ProjectService
 {
     Id = 2,
     Title = "Kattmatch",
-    Description = "Kattmatch is a free, multi-tenant cat adoption platform connecting Swedish rescue organizations with adopters and foster homes. Currently onboarding pilot organizations.",
+    Description = "A multi-tenant cat adoption platform in production, used by Swedish rescue organizations. Built and operated solo: database design, a Postgres row-level security model, transactional email, CI/CD and error monitoring.",
     Technologies = new List<string> { "Next.js", "Supabase", "TailwindCSS",  "TypeScript", "Resend", "Vercel" },
     Screenshots = new List<string>
     {
@@ -23,7 +23,8 @@ public class ProjectService
         "/images/catlist.png",
         "/images/cta.png"
     },
-    Badge = "Pre-launch",
+    Badge = "Live",
+    LiveUrl = "https://kattmatch.com",
     IconClass = "fas fa-cat",
     IsFeatured = true
 
